@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)https://superblogger.nl/over-ons-pagina-maken/ -->
+<html class="html" lang="nl-NL"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(e){this.triggerEvents=e,this.eventOptions={passive:!0},this.userEventHandler=this.triggerListener.bind(this),this.delayedScripts={normal:[],async:[],defer:[]},this.allJQueries=[]}_addUserInteractionListener(e){this.triggerEvents.forEach((t=>window.addEventListener(t,e.userEventHandler,e.eventOptions)))}_removeUserInteractionListener(e){this.triggerEvents.forEach((t=>window.removeEventListener(t,e.userEventHandler,e.eventOptions)))}_interceptClicks(e){e.interceptedClicks=[],e.clickHandler=e._saveClicks.bind(e),window.addEventListener("click",e.clickHandler)}_saveClicks(e){this.interceptedClicks.push(e),e.target.matches('a[href="#"], a[href="#"] *')&&e.preventDefault()}_replayClicks(){window.removeEventListener("click",this.clickHandler),this.interceptedClicks.forEach((e=>{e.target.dispatchEvent(new MouseEvent("click",{view:e.view,bubbles:!0,cancelable:!0}))}))}triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}async _loadEverythingNow(){this._delayEventListeners(),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async),await this._triggerDOMContentLoaded(),await this._triggerWindowLoad(),window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this._replayClicks()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((e=>{e.hasAttribute("src")?e.hasAttribute("async")&&!1!==e.async?this.delayedScripts.async.push(e):e.hasAttribute("defer")&&!1!==e.defer||"module"===e.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(e):this.delayedScripts.normal.push(e):this.delayedScripts.normal.push(e)}))}async _transformScript(e){return await this._requestAnimFrame(),new Promise((t=>{const n=document.createElement("script");[...e.attributes].forEach((e=>{let t=e.nodeName;"type"!==t&&("data-rocket-type"===t&&(t="type"),n.setAttribute(t,e.nodeValue))})),e.hasAttribute("src")?(n.addEventListener("load",t),n.addEventListener("error",t)):(n.text=e.text,t()),e.parentNode.replaceChild(n,e)}))}async _loadScriptsFromList(e){const t=e.shift();return t?(await this._transformScript(t),this._loadScriptsFromList(e)):Promise.resolve()}_preloadAllScripts(){var e=document.createDocumentFragment();[...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async].forEach((t=>{const n=t.getAttribute("src");if(n){const t=document.createElement("link");t.href=n,t.rel="preload",t.as="script",e.appendChild(t)}})),document.head.appendChild(e)}_delayEventListeners(){let e={};function t(t,n){!function(t){function n(n){return e[t].eventsToRewrite.indexOf(n)>=0?"rocket-"+n:n}e[t]||(e[t]={originalFunctions:{add:t.addEventListener,remove:t.removeEventListener},eventsToRewrite:[]},t.addEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.add.apply(t,arguments)},t.removeEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.remove.apply(t,arguments)})}(t),e[t].eventsToRewrite.push(n)}function n(e,t){let n=e[t];Object.defineProperty(e,t,{get:()=>n||function(){},set(i){e["rocket"+t]=n=i}})}t(document,"DOMContentLoaded"),t(window,"DOMContentLoaded"),t(window,"load"),t(window,"pageshow"),t(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}_delayJQueryReady(e){let t=window.jQuery;Object.defineProperty(window,"jQuery",{get:()=>t,set(n){if(n&&n.fn&&!e.allJQueries.includes(n)){n.fn.ready=n.fn.init.prototype.ready=function(t){e.domReadyFired?t.bind(document)(n):document.addEventListener("rocket-DOMContentLoaded",(()=>t.bind(document)(n)))};const t=n.fn.on;n.fn.on=n.fn.init.prototype.on=function(){if(this[0]===window){function e(e){return e.split(" ").map((e=>"load"===e||0===e.indexOf("load.")?"rocket-jquery-load":e)).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=e(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{delete Object.assign(arguments[0],{[e(t)]:arguments[0][t]})[t]}))}return t.apply(this,arguments),this},e.allJQueries.push(n)}t=n}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._requestAnimFrame(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._requestAnimFrame(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._requestAnimFrame(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._requestAnimFrame(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._requestAnimFrame(),window.dispatchEvent(new Event("rocket-load")),await this._requestAnimFrame(),window.rocketonload&&window.rocketonload(),await this._requestAnimFrame(),this.allJQueries.forEach((e=>e(window).trigger("rocket-jquery-load"))),window.dispatchEvent(new Event("rocket-pageshow")),await this._requestAnimFrame(),window.rocketonpageshow&&window.rocketonpageshow()}_handleDocumentWrite(){const e=new Map;document.write=document.writeln=function(t){const n=document.currentScript,i=document.createRange(),r=n.parentElement;let a=e.get(n);void 0===a&&(a=n.nextSibling,e.set(n,a));const s=document.createDocumentFragment();i.setStart(s,0),s.appendChild(i.createContextualFragment(t)),r.insertBefore(s,a)}}async _requestAnimFrame(){return new Promise((e=>requestAnimationFrame(e)))}static run(){const e=new RocketLazyLoadScripts(["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"]);e._addUserInteractionListener(e),e._interceptClicks(e)}}RocketLazyLoadScripts.run();</script>
+	
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- This site is optimized with the Yoast SEO plugin v21.6 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Over ons pagina maken? 5 voorbeelden ter inspiratie!</title><link rel="preload" as="style" href="./img_files/css"><link rel="stylesheet" href="./img_files/css" media="all" onload="this.media=&#39;all&#39;"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C100i%2C200i%2C300i%2C400i%2C500i%2C600i%2C700i%2C800i%2C900i%7CSource%20Sans%20Pro%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C100i%2C200i%2C300i%2C400i%2C500i%2C600i%2C700i%2C800i%2C900i%7CPoppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CNoto%20Sans%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CSource%20Sans%20Pro%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CSen%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CCaveat%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;subset=latin&#038;display=swap" /></noscript>
+	<meta name="description" content="Weet je niet wat je op de Over ons pagina van je website moet zetten? In deze blogpost vind je 5 verschillende templates ter inspiratie!">
+	<link rel="canonical" href="https://superblogger.nl/over-ons-pagina-maken/">
+	<meta property="og:locale" content="nl_NL">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Over ons pagina maken? 5 voorbeelden ter inspiratie!">
+	<meta property="og:description" content="Weet je niet wat je op de Over ons pagina van je website moet zetten? In deze blogpost vind je 5 verschillende templates ter inspiratie!">
+	<meta property="og:url" content="https://superblogger.nl/over-ons-pagina-maken/">
+	<meta property="og:site_name" content="SuperBlogger">
+	<meta property="article:published_time" content="2020-07-27T17:25:39+00:00">
+	<meta property="article:modified_time" content="2024-02-17T14:49:34+00:00">
+	<meta property="og:image" content="https://superblogger.nl/wp-content/uploads/2020/07/over-ons-pagina-maken-img.jpg">
+	<meta property="og:image:width" content="2000">
+	<meta property="og:image:height" content="1113">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta name="author" content="Sharon">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:label1" content="Geschreven door">
+	<meta name="twitter:data1" content="Sharon">
+	<meta name="twitter:label2" content="Geschatte leestijd">
+	<meta name="twitter:data2" content="12 minuten">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://superblogger.nl/over-ons-pagina-maken/#article","isPartOf":{"@id":"https://superblogger.nl/over-ons-pagina-maken/"},"author":{"name":"Sharon","@id":"https://superblogger.nl/#/schema/person/fd842234d54bea50097c3e7e129236ba"},"headline":"5 voorbeelden voor je eigen over ons pagina","datePublished":"2020-07-27T17:25:39+00:00","dateModified":"2024-02-17T14:49:34+00:00","mainEntityOfPage":{"@id":"https://superblogger.nl/over-ons-pagina-maken/"},"wordCount":2046,"publisher":{"@id":"https://superblogger.nl/#organization"},"image":{"@id":"https://superblogger.nl/over-ons-pagina-maken/#primaryimage"},"thumbnailUrl":"https://superblogger.nl/wp-content/uploads/2020/07/over-ons-pagina-maken-img.jpg","keywords":["Creatie"],"articleSection":["Content met impact"],"inLanguage":"nl-NL"},{"@type":"WebPage","@id":"https://superblogger.nl/over-ons-pagina-maken/","url":"https://superblogger.nl/over-ons-pagina-maken/","name":"Over ons pagina maken? 5 voorbeelden ter inspiratie!","isPartOf":{"@id":"https://superblogger.nl/#website"},"primaryImageOfPage":{"@id":"https://superblogger.nl/over-ons-pagina-maken/#primaryimage"},"image":{"@id":"https://superblogger.nl/over-ons-pagina-maken/#primaryimage"},"thumbnailUrl":"https://superblogger.nl/wp-content/uploads/2020/07/over-ons-pagina-maken-img.jpg","datePublished":"2020-07-27T17:25:39+00:00","dateModified":"2024-02-17T14:49:34+00:00","description":"Weet je niet wat je op de Over ons pagina van je website moet zetten? In deze blogpost vind je 5 verschillende templates ter inspiratie!","breadcrumb":{"@id":"https://superblogger.nl/over-ons-pagina-maken/#breadcrumb"},"inLanguage":"nl-NL","potentialAction":[{"@type":"ReadAction","target":["https://superblogger.nl/over-ons-pagina-maken/"]}]},{"@type":"ImageObject","inLanguage":"nl-NL","@id":"https://superblogger.nl/over-ons-pagina-maken/#primaryimage","url":"https://superblogger.nl/wp-content/uploads/2020/07/over-ons-pagina-maken-img.jpg","contentUrl":"https://superblogger.nl/wp-content/uploads/2020/07/over-ons-pagina-maken-img.jpg","width":2000,"height":1113,"caption":"Over ons pagina maken"},{"@type":"BreadcrumbList","@id":"https://superblogger.nl/over-ons-pagina-maken/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://superblogger.nl/"},{"@type":"ListItem","position":2,"name":"5 voorbeelden voor je eigen over ons pagina"}]},{"@type":"WebSite","@id":"https://superblogger.nl/#website","url":"https://superblogger.nl/","name":"SuperBlogger","description":"","publisher":{"@id":"https://superblogger.nl/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://superblogger.nl/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"nl-NL"},{"@type":"Organization","@id":"https://superblogger.nl/#organization","name":"SuperBlogger","url":"https://superblogger.nl/","logo":{"@type":"ImageObject","inLanguage":"nl-NL","@id":"https://superblogger.nl/#/schema/logo/image/","url":"https://superblogger.nl/wp-content/uploads/2023/01/logo-sb-wit.png","contentUrl":"https://superblogger.nl/wp-content/uploads/2023/01/logo-sb-wit.png","width":339,"height":79,"caption":"SuperBlogger"},"image":{"@id":"https://superblogger.nl/#/schema/logo/image/"}},{"@type":"Person","@id":"https://superblogger.nl/#/schema/person/fd842234d54bea50097c3e7e129236ba","name":"Sharon","image":{"@type":"ImageObject","inLanguage":"nl-NL","@id":"https://superblogger.nl/#/schema/person/image/","url":"https://secure.gravatar.com/avatar/eea67cab38f74d39a1432227b7f034d3?s=96&d=mm&r=g","contentUrl":"https://secure.gravatar.com/avatar/eea67cab38f74d39a1432227b7f034d3?s=96&d=mm&r=g","caption":"Sharon"},"sameAs":["https://superblogger.nl"],"url":"https://superblogger.nl/author/slederer/"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="dns-prefetch" href="https://www.googletagmanager.com/">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link href="https://fonts.gstatic.com/" crossorigin="" rel="preconnect">
+<link rel="alternate" type="application/rss+xml" title="SuperBlogger » feed" href="https://superblogger.nl/feed/">
+<link rel="alternate" type="application/rss+xml" title="SuperBlogger » reactiesfeed" href="https://superblogger.nl/comments/feed/">
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel="stylesheet" id="wp-block-library-css" href="./img_files/style.min.css" media="all">
+<style id="wp-block-library-theme-inline-css">
+.wp-block-audio figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio figcaption{color:hsla(0,0%,100%,.65)}.wp-block-audio{margin:0 0 1em}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed figcaption{color:hsla(0,0%,100%,.65)}.wp-block-embed{margin:0 0 1em}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:hsla(0,0%,100%,.65)}.wp-block-image figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-image figcaption{color:hsla(0,0%,100%,.65)}.wp-block-image{margin:0 0 1em}.wp-block-pullquote{border-bottom:4px solid;border-top:4px solid;color:currentColor;margin-bottom:1.75em}.wp-block-pullquote cite,.wp-block-pullquote footer,.wp-block-pullquote__citation{color:currentColor;font-size:.8125em;font-style:normal;text-transform:uppercase}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;font-style:normal;position:relative}.wp-block-quote.has-text-align-right{border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote.has-text-align-center{border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote.is-style-plain{border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-search__button{border:1px solid #ccc;padding:.375em .625em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table{margin:0 0 1em}.wp-block-table td,.wp-block-table th{word-break:normal}.wp-block-table figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video{margin:0 0 1em}.wp-block-template-part.has-background{margin-bottom:0;margin-top:0;padding:1.25em 2.375em}
+</style>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id="global-styles-inline-css">
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link data-minify="1" rel="stylesheet" id="font-awesome-css" href="./img_files/all.min.css" media="all">
+<link data-minify="1" rel="stylesheet" id="simple-line-icons-css" href="./img_files/simple-line-icons.min.css" media="all">
+<link rel="stylesheet" id="oceanwp-style-css" href="./img_files/style(1).min.css" media="all">
+
+
+<link data-minify="1" rel="stylesheet" id="elementor-icons-css" href="./img_files/elementor-icons.min.css" media="all">
+<link rel="stylesheet" id="elementor-frontend-css" href="./img_files/frontend-lite.min.css" media="all">
+<style id="elementor-frontend-inline-css">
+.elementor-3737 .elementor-element.elementor-element-2977e2b:not(.elementor-motion-effects-element-type-background), .elementor-3737 .elementor-element.elementor-element-2977e2b > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:url("https://superblogger.nl/wp-content/uploads/2020/07/over-ons-pagina-maken-img.jpg");}.elementor-3737 .elementor-element.elementor-element-ec152da:not(.elementor-motion-effects-element-type-background), .elementor-3737 .elementor-element.elementor-element-ec152da > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:url("https://superblogger.nl/wp-content/uploads/2023/08/aanbod-van-lezer-naar-kopers-cursus.jpg");}
+</style>
+<link rel="stylesheet" id="swiper-css" href="./img_files/swiper.min.css" media="all">
+<link data-minify="1" rel="stylesheet" id="elementor-post-5-css" href="./img_files/post-5.css" media="all">
+<link rel="stylesheet" id="elementor-pro-css" href="./img_files/frontend-lite(1).min.css" media="all">
+<link data-minify="1" rel="stylesheet" id="elementor-global-css" href="./img_files/global.css" media="all">
+<link data-minify="1" rel="stylesheet" id="elementor-post-48-css" href="./img_files/post-48.css" media="all">
+<link data-minify="1" rel="stylesheet" id="elementor-post-3737-css" href="./img_files/post-3737.css" media="all">
+<link data-minify="1" rel="stylesheet" id="elementor-post-5632-css" href="./img_files/post-5632.css" media="all">
+<link data-minify="1" rel="stylesheet" id="elementor-post-5586-css" href="./img_files/post-5586.css" media="all">
+<link data-minify="1" rel="stylesheet" id="tablepress-default-css" href="./img_files/default.css" media="all">
+<link data-minify="1" rel="stylesheet" id="child-style-css" href="./img_files/style.css" media="all">
+<link data-minify="1" rel="stylesheet" id="oe-widgets-style-css" href="./img_files/widgets.css" media="all">
+
+<link rel="stylesheet" id="elementor-icons-shared-0-css" href="./img_files/fontawesome.min.css" media="all">
+<link data-minify="1" rel="stylesheet" id="elementor-icons-fa-regular-css" href="./img_files/regular.min.css" media="all">
+<link data-minify="1" rel="stylesheet" id="elementor-icons-fa-solid-css" href="./img_files/solid.min.css" media="all">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin=""><script src="./img_files/jquery.min.js.download" id="jquery-core-js" defer=""></script>
+<script src="./img_files/jquery-migrate.min.js.download" id="jquery-migrate-js" defer=""></script>
+
+<!-- Google Analytics snippet toegevoegd door Site Kit -->
+<script src="./img_files/js" id="google_gtagjs-js" async=""></script>
+<script id="google_gtagjs-js-after">
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag('set', 'linker', {"domains":["superblogger.nl"]} );
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "GT-57VBJJR");
+</script>
+
+<!-- Einde Google Analytics snippet toegevoegd door Site Kit -->
+<link rel="https://api.w.org/" href="https://superblogger.nl/wp-json/"><link rel="alternate" type="application/json" href="https://superblogger.nl/wp-json/wp/v2/posts/2986"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://superblogger.nl/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.4.3">
+<link rel="shortlink" href="https://superblogger.nl/?p=2986">
+<meta name="generator" content="Site Kit by Google 1.114.0"><meta name="generator" content="Elementor 3.19.2; features: e_optimized_assets_loading, e_optimized_css_loading, additional_custom_breakpoints, block_editor_assets_optimize, e_image_loading_optimization; settings: css_print_method-external, google_font-enabled, font_display-auto">
+		<style id="wp-custom-css">
+			.cta-heading p{margin-bottom:0}@media (min-width:801px){.newsletter-menu{margin-right:40px}.newsletter-menu span{border-bottom:2px solid #202020;padding-bottom:2px}.newsletter-menu span:hover{border-color:#472d7a}}@media (max-width:600px){.elementor-column-gap-default>.elementor-column>.elementor-element-populated{padding:20px}}		</style>
+		<!-- OceanWP CSS -->
+<style type="text/css">
+/* General CSS */a:hover,a.light:hover,.theme-heading .text::before,.theme-heading .text::after,#top-bar-content >a:hover,#top-bar-social li.oceanwp-email a:hover,#site-navigation-wrap .dropdown-menu >li >a:hover,#site-header.medium-header #medium-searchform button:hover,.oceanwp-mobile-menu-icon a:hover,.blog-entry.post .blog-entry-header .entry-title a:hover,.blog-entry.post .blog-entry-readmore a:hover,.blog-entry.thumbnail-entry .blog-entry-category a,ul.meta li a:hover,.dropcap,.single nav.post-navigation .nav-links .title,body .related-post-title a:hover,body #wp-calendar caption,body .contact-info-widget.default i,body .contact-info-widget.big-icons i,body .custom-links-widget .oceanwp-custom-links li a:hover,body .custom-links-widget .oceanwp-custom-links li a:hover:before,body .posts-thumbnails-widget li a:hover,body .social-widget li.oceanwp-email a:hover,.comment-author .comment-meta .comment-reply-link,#respond #cancel-comment-reply-link:hover,#footer-widgets .footer-box a:hover,#footer-bottom a:hover,#footer-bottom #footer-bottom-menu a:hover,.sidr a:hover,.sidr-class-dropdown-toggle:hover,.sidr-class-menu-item-has-children.active >a,.sidr-class-menu-item-has-children.active >a >.sidr-class-dropdown-toggle,input[type=checkbox]:checked:before{color:#cc3649}.single nav.post-navigation .nav-links .title .owp-icon use,.blog-entry.post .blog-entry-readmore a:hover .owp-icon use,body .contact-info-widget.default .owp-icon use,body .contact-info-widget.big-icons .owp-icon use{stroke:#cc3649}input[type="button"],input[type="reset"],input[type="submit"],button[type="submit"],.button,#site-navigation-wrap .dropdown-menu >li.btn >a >span,.thumbnail:hover i,.post-quote-content,.omw-modal .omw-close-modal,body .contact-info-widget.big-icons li:hover i,body div.wpforms-container-full .wpforms-form input[type=submit],body div.wpforms-container-full .wpforms-form button[type=submit],body div.wpforms-container-full .wpforms-form .wpforms-page-button{background-color:#cc3649}.thumbnail:hover .link-post-svg-icon{background-color:#cc3649}body .contact-info-widget.big-icons li:hover .owp-icon{background-color:#cc3649}.widget-title{border-color:#cc3649}blockquote{border-color:#cc3649}#searchform-dropdown{border-color:#cc3649}.dropdown-menu .sub-menu{border-color:#cc3649}.blog-entry.large-entry .blog-entry-readmore a:hover{border-color:#cc3649}.oceanwp-newsletter-form-wrap input[type="email"]:focus{border-color:#cc3649}.social-widget li.oceanwp-email a:hover{border-color:#cc3649}#respond #cancel-comment-reply-link:hover{border-color:#cc3649}body .contact-info-widget.big-icons li:hover i{border-color:#cc3649}#footer-widgets .oceanwp-newsletter-form-wrap input[type="email"]:focus{border-color:#cc3649}blockquote,.wp-block-quote{border-left-color:#cc3649}body .contact-info-widget.big-icons li:hover .owp-icon{border-color:#cc3649}input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover,button[type="submit"]:hover,input[type="button"]:focus,input[type="reset"]:focus,input[type="submit"]:focus,button[type="submit"]:focus,.button:hover,.button:focus,#site-navigation-wrap .dropdown-menu >li.btn >a:hover >span,.post-quote-author,.omw-modal .omw-close-modal:hover,body div.wpforms-container-full .wpforms-form input[type=submit]:hover,body div.wpforms-container-full .wpforms-form button[type=submit]:hover,body div.wpforms-container-full .wpforms-form .wpforms-page-button:hover{background-color:#822330}/* Header CSS */#site-logo #site-logo-inner,.oceanwp-social-menu .social-menu-inner,#site-header.full_screen-header .menu-bar-inner,.after-header-content .after-header-content-inner{height:72px}#site-navigation-wrap .dropdown-menu >li >a,.oceanwp-mobile-menu-icon a,.mobile-menu-close,.after-header-content-inner >a{line-height:72px}#site-header,.has-transparent-header .is-sticky #site-header,.has-vh-transparent .is-sticky #site-header.vertical-header,#searchform-header-replace{background-color:#32213a}#site-header-inner{padding:8px 0 8px 0}#site-header.has-header-media .overlay-header-media{background-color:rgba(0,0,0,0.5)}#site-header #site-logo #site-logo-inner a img,#site-header.center-header #site-navigation-wrap .middle-site-logo a img{max-height:60px}#site-logo.has-responsive-logo .responsive-logo-link img{max-height:34px}#site-navigation-wrap .dropdown-menu >li >a{padding:0 20px}#site-navigation-wrap .dropdown-menu >li >a,.oceanwp-mobile-menu-icon a,#searchform-header-replace-close{color:#ffffff}#site-navigation-wrap .dropdown-menu >li >a .owp-icon use,.oceanwp-mobile-menu-icon a .owp-icon use,#searchform-header-replace-close .owp-icon use{stroke:#ffffff}#site-navigation-wrap .dropdown-menu >li >a:hover,.oceanwp-mobile-menu-icon a:hover,#searchform-header-replace-close:hover{color:#cc3649}#site-navigation-wrap .dropdown-menu >li >a:hover .owp-icon use,.oceanwp-mobile-menu-icon a:hover .owp-icon use,#searchform-header-replace-close:hover .owp-icon use{stroke:#cc3649}#site-navigation-wrap .dropdown-menu >.current-menu-item >a,#site-navigation-wrap .dropdown-menu >.current-menu-ancestor >a,#site-navigation-wrap .dropdown-menu >.current-menu-item >a:hover,#site-navigation-wrap .dropdown-menu >.current-menu-ancestor >a:hover{color:#ffffff}#mobile-fullscreen{background-color:#312139}body .sidr a,body .sidr-class-dropdown-toggle,#mobile-dropdown ul li a,#mobile-dropdown ul li a .dropdown-toggle,#mobile-fullscreen ul li a,#mobile-fullscreen .oceanwp-social-menu.simple-social ul li a{color:#ffffff}#mobile-fullscreen a.close .close-icon-inner,#mobile-fullscreen a.close .close-icon-inner::after{background-color:#ffffff}body .sidr a:hover,body .sidr-class-dropdown-toggle:hover,body .sidr-class-dropdown-toggle .fa,body .sidr-class-menu-item-has-children.active >a,body .sidr-class-menu-item-has-children.active >a >.sidr-class-dropdown-toggle,#mobile-dropdown ul li a:hover,#mobile-dropdown ul li a .dropdown-toggle:hover,#mobile-dropdown .menu-item-has-children.active >a,#mobile-dropdown .menu-item-has-children.active >a >.dropdown-toggle,#mobile-fullscreen ul li a:hover,#mobile-fullscreen .oceanwp-social-menu.simple-social ul li a:hover{color:#cc3549}#mobile-fullscreen a.close:hover .close-icon-inner,#mobile-fullscreen a.close:hover .close-icon-inner::after{background-color:#cc3549}/* Typography CSS */#site-navigation-wrap .dropdown-menu >li >a,#site-header.full_screen-header .fs-dropdown-menu >li >a,#site-header.top-header #site-navigation-wrap .dropdown-menu >li >a,#site-header.center-header #site-navigation-wrap .dropdown-menu >li >a,#site-header.medium-header #site-navigation-wrap .dropdown-menu >li >a,.oceanwp-mobile-menu-icon a{font-family:Poppins;font-weight:500;font-size:16px;letter-spacing:.4px}.sidr-class-dropdown-menu li a,a.sidr-class-toggle-sidr-close,#mobile-dropdown ul li a,body #mobile-fullscreen ul li a{font-family:Source Sans Pro;font-weight:600;font-size:18px;text-transform:none}
+</style><noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript><link href="./img_files/wp-polyfill.min.js.download" rel="preload" as="script"><link href="./img_files/hooks.min.js.download" rel="preload" as="script"><link href="./img_files/i18n.min.js.download" rel="preload" as="script"><link href="./img_files/jquery.min.js.download" rel="preload" as="script"><link href="./img_files/jquery-migrate.min.js.download" rel="preload" as="script"><link href="./img_files/imagesloaded.min.js.download" rel="preload" as="script"><link href="./img_files/theme.min.js.download" rel="preload" as="script"><link href="./img_files/full-screen-mobile-menu.min.js.download" rel="preload" as="script"><link href="./img_files/overlay-search.min.js.download" rel="preload" as="script"><link href="./img_files/magnific-popup.min.js.download" rel="preload" as="script"><link href="./img_files/ow-lightbox.min.js.download" rel="preload" as="script"><link href="./img_files/flickity.pkgd.min.js.download" rel="preload" as="script"><link href="./img_files/ow-slider.min.js.download" rel="preload" as="script"><link href="./img_files/scroll-effect.min.js.download" rel="preload" as="script"><link href="./img_files/scroll-top.min.js.download" rel="preload" as="script"><link href="./img_files/select.min.js.download" rel="preload" as="script"><link href="./img_files/js.cookie.min.js.download" rel="preload" as="script"><link href="./img_files/jquery.sticky-kit.min.js.download" rel="preload" as="script"><link href="./img_files/front.min.js.download" rel="preload" as="script"><link href="./img_files/jquery.datatables.min.js.download" rel="preload" as="script"><link href="./img_files/jquery.smartmenus.min.js.download" rel="preload" as="script"><link href="./img_files/webpack-pro.runtime.min.js.download" rel="preload" as="script"><link href="./img_files/webpack.runtime.min.js.download" rel="preload" as="script"><link href="./img_files/frontend-modules.min.js.download" rel="preload" as="script"><link href="./img_files/wp-polyfill-inert.min.js.download" rel="preload" as="script"><link href="./img_files/regenerator-runtime.min.js.download" rel="preload" as="script"><link href="./img_files/frontend.min.js.download" rel="preload" as="script"><link href="./img_files/waypoints.min.js.download" rel="preload" as="script"><link href="./img_files/core.min.js.download" rel="preload" as="script"><link href="./img_files/frontend.min(1).js.download" rel="preload" as="script"><link href="./img_files/elements-handlers.min.js.download" rel="preload" as="script"><link href="./img_files/jquery.sticky.min.js.download" rel="preload" as="script"><link href="./img_files/js" rel="preload" as="script"><link href="./img_files/js(1)" rel="preload" as="script"></head>
+
+<body class="post-template-default single single-post postid-2986 single-format-standard wp-custom-logo wp-embed-responsive oceanwp-theme fullscreen-mobile no-header-border default-breakpoint content-full-width content-max-width post-in-category-content-met-impact page-header-disabled has-breadcrumbs elementor-default elementor-kit-5 elementor-page-3737 e--ua-blink e--ua-chrome e--ua-webkit" itemscope="itemscope" itemtype="https://schema.org/Article" data-elementor-device-mode="desktop">
+
+	
+	
+	<div id="outer-wrap" class="site clr">
+
+		<a class="skip-link screen-reader-text" href="https://superblogger.nl/over-ons-pagina-maken/#main">Ga naar inhoud</a>
+
+		
+		<div id="wrap" class="clr">
+
+			
+			
+<header id="site-header" class="minimal-header search-overlay clr" data-height="72" itemscope="itemscope" itemtype="https://schema.org/WPHeader" role="banner">
+
+	
+					
+			<div id="site-header-inner" class="clr container">
+
+				
+				
+
+<div id="site-logo" class="clr has-responsive-logo" itemscope="" itemtype="https://schema.org/Brand">
+
+	
+	<div id="site-logo-inner" class="clr">
+
+		<a href="https://superblogger.nl/" class="custom-logo-link" rel="home"><img loading="lazy" width="339" height="79" src="./img_files/logo-sb-wit.png" class="custom-logo lazyloaded" alt="SuperBlogger" decoding="async" sizes="(max-width: 339px) 100vw, 339px" srcset="https://superblogger.nl/wp-content/uploads/2023/01/logo-sb-wit.png 339w, https://superblogger.nl/wp-content/uploads/2023/01/logo-sb-wit-300x70.png 300w" data-ll-status="loaded"><noscript><img loading="lazy" width="339" height="79" src="https://superblogger.nl/wp-content/uploads/2023/01/logo-sb-wit.png" class="custom-logo" alt="SuperBlogger" decoding="async" srcset="https://superblogger.nl/wp-content/uploads/2023/01/logo-sb-wit.png 339w, https://superblogger.nl/wp-content/uploads/2023/01/logo-sb-wit-300x70.png 300w" sizes="(max-width: 339px) 100vw, 339px" /></noscript></a><a href="https://superblogger.nl/" class="responsive-logo-link" rel="home"><img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20339%2079&#39;%3E%3C/svg%3E" class="responsive-logo" width="339" height="79" alt="" data-lazy-src="https://superblogger.nl/wp-content/uploads/2023/01/logo-sb-wit.png"><noscript><img loading="lazy" src="https://superblogger.nl/wp-content/uploads/2023/01/logo-sb-wit.png" class="responsive-logo" width="339" height="79" alt="" /></noscript></a>
+	</div><!-- #site-logo-inner -->
+
+	
+	
+</div><!-- #site-logo -->
+
+			<div id="site-navigation-wrap" class="clr">
+			
+			
+			
+			<nav id="site-navigation" class="navigation main-navigation clr" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement" role="navigation">
+
+				<ul id="menu-primair" class="main-menu dropdown-menu sf-menu"><li id="menu-item-329" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-329"><a href="https://superblogger.nl/start-hier/" class="menu-link"><span class="text-wrap">Start hier</span></a></li><li id="menu-item-657" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-657"><a href="https://superblogger.nl/blog/" class="menu-link"><span class="text-wrap">Alle blogs</span></a></li><li id="menu-item-630" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-630"><a href="https://superblogger.nl/producten/" class="menu-link"><span class="text-wrap">Cursussen &amp; Ebooks</span></a></li><li id="menu-item-5397" class="menu-cta menu-item menu-item-type-post_type menu-item-object-pro menu-item-5397"><a href="https://superblogger.nl/pro/minicursus-bloggen/" class="menu-link"><span class="text-wrap">Gratis minicursus</span></a></li><li class="search-toggle-li"><a href="https://superblogger.nl/#" class="site-search-toggle search-overlay-toggle"><span class="screen-reader-text">Toggle website zoeken</span><i class=" icon-magnifier" aria-hidden="true" role="img"></i></a></li></ul>
+			</nav><!-- #site-navigation -->
+
+			
+			
+					</div><!-- #site-navigation-wrap -->
+			
+		
+	
+				
+	
+	<div class="oceanwp-mobile-menu-icon clr mobile-right">
+
+		
+		
+		
+		<a href="https://superblogger.nl/#mobile-menu-toggle" class="mobile-menu" aria-label="Mobiel menu">
+							<i class="fa fa-bars" aria-hidden="true"></i>
+						</a>
+
+		
+		
+		
+	</div><!-- #oceanwp-mobile-menu-navbar -->
+
+	
+
+			</div><!-- #site-header-inner -->
+
+			
+			
+			
+		
+		
+</header><!-- #site-header -->
+
+
+			
+			<main id="main" class="site-main clr" role="main">
+
+				
+	
+	<div id="content-wrap" class="container clr">
+
+		
+		<div id="primary" class="content-area clr">
+
+			
+			<div id="content" class="site-content clr">
+
+				
+						<div data-elementor-type="single-post" data-elementor-id="3737" class="elementor elementor-3737 elementor-location-single post-2986 post type-post status-publish format-standard has-post-thumbnail hentry category-content-met-impact tag-creatie entry has-media" data-elementor-post-type="elementor_library">
+					<section class="elementor-section elementor-top-section elementor-element elementor-element-2977e2b elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="2977e2b" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-9f33f75" data-id="9f33f75" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-6ec883d elementor-widget elementor-widget-spacer" data-id="6ec883d" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.19.0 - 07-02-2024 */
+.elementor-column .elementor-spacer-inner{height:var(--spacer-size)}.e-con{--container-widget-width:100%}.e-con-inner>.elementor-widget-spacer,.e-con>.elementor-widget-spacer{width:var(--container-widget-width,var(--spacer-size));--align-self:var(--container-widget-align-self,initial);--flex-shrink:0}.e-con-inner>.elementor-widget-spacer>.elementor-widget-container,.e-con>.elementor-widget-spacer>.elementor-widget-container{height:100%;width:100%}.e-con-inner>.elementor-widget-spacer>.elementor-widget-container>.elementor-spacer,.e-con>.elementor-widget-spacer>.elementor-widget-container>.elementor-spacer{height:100%}.e-con-inner>.elementor-widget-spacer>.elementor-widget-container>.elementor-spacer>.elementor-spacer-inner,.e-con>.elementor-widget-spacer>.elementor-widget-container>.elementor-spacer>.elementor-spacer-inner{height:var(--container-widget-height,var(--spacer-size))}.e-con-inner>.elementor-widget-spacer.elementor-widget-empty,.e-con>.elementor-widget-spacer.elementor-widget-empty{position:relative;min-height:22px;min-width:22px}.e-con-inner>.elementor-widget-spacer.elementor-widget-empty .elementor-widget-empty-icon,.e-con>.elementor-widget-spacer.elementor-widget-empty .elementor-widget-empty-icon{position:absolute;top:0;bottom:0;left:0;right:0;margin:auto;padding:0;width:22px;height:22px}</style>		<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+		<div class="elementor-element elementor-element-a4067e5 e-flex e-con-boxed e-con e-parent" data-id="a4067e5" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}" data-core-v316-plus="true">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-03807e4 e-con-full e-flex e-con e-child" data-id="03807e4" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+				<div class="elementor-element elementor-element-5831747 elementor-align-left elementor-widget elementor-widget-button" data-id="5831747" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a class="elementor-button elementor-button-link elementor-size-sm" href="https://superblogger.nl/blog/">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-icon elementor-align-icon-left">
+				<i aria-hidden="true" class="fas fa-long-arrow-alt-left"></i>			</span>
+						<span class="elementor-button-text">Alle blogs</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-f68626d elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading" data-id="f68626d" data-element_type="widget" data-widget_type="theme-post-title.default">
+				<div class="elementor-widget-container">
+			<h1 class="elementor-heading-title elementor-size-default">5 voorbeelden voor je eigen over ons pagina</h1>		</div>
+				</div>
+				<div class="elementor-element elementor-element-e59a842 intro-blog elementor-widget elementor-widget-text-editor" data-id="e59a842" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							Vrijwel elke website heeft een over ons pagina. Toch is dit vaak niet de meest spannende pagina op de website en dat is jammer. Maar wat vertel je over je bedrijf of blog, dat interessant genoeg is voor je bezoeker? Of beter nog: wat ervoor zorgt dat bezoekers tot actie overgaan? In deze blogpost deel ik verschillende tips, aan de hand van 5 verschillende goede voorbeelden.						</div>
+				</div>
+		<div class="elementor-element elementor-element-4fd18c7 elementor-hidden-desktop e-flex e-con-boxed e-con e-child" data-id="4fd18c7" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;content_width&quot;:&quot;boxed&quot;}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-0d41996 elementor-widget elementor-widget-shortcode" data-id="0d41996" data-element_type="widget" data-widget_type="shortcode.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-shortcode"><div id="ez-toc-container" class="ez-toc-v2_0_59 counter-flat ez-toc-counter ez-toc-transparent ez-toc-container-direction">
+<div class="ez-toc-title-container">
+<p class="ez-toc-title ">In deze blogpost:</p>
+<span class="ez-toc-title-toggle"></span></div>
+<nav><ul class="ez-toc-list ez-toc-list-level-1 "><li class="ez-toc-page-1"><a class="ez-toc-link ez-toc-heading-1" href="https://superblogger.nl/over-ons-pagina-maken/#hoe-belangrijk-is-de-over-ons-pagina" title="Hoe belangrijk is de over ons pagina?">Hoe belangrijk is de over ons pagina?</a></li><li class="ez-toc-page-1"><a class="ez-toc-link ez-toc-heading-2" href="https://superblogger.nl/over-ons-pagina-maken/#3-basisregels-voor-je-over-ons-pagina" title="3 basisregels voor je over ons pagina">3 basisregels voor je over ons pagina</a></li><li class="ez-toc-page-1"><a class="ez-toc-link ez-toc-heading-3" href="https://superblogger.nl/over-ons-pagina-maken/#5-goede-voorbeelden-ter-inspiratie" title="5 goede voorbeelden ter inspiratie">5 goede voorbeelden ter inspiratie</a></li><li class="ez-toc-page-1"><a class="ez-toc-link ez-toc-heading-4" href="https://superblogger.nl/over-ons-pagina-maken/#bouw-je-over-ons-pagina-met-elementor" title="Bouw je over ons pagina met Elementor">Bouw je over ons pagina met Elementor</a></li><li class="ez-toc-page-1"><a class="ez-toc-link ez-toc-heading-5" href="https://superblogger.nl/over-ons-pagina-maken/#infographic-met-de-5-templates" title="Infographic met de 5 templates">Infographic met de 5 templates</a></li><li class="ez-toc-page-1"><a class="ez-toc-link ez-toc-heading-6" href="https://superblogger.nl/over-ons-pagina-maken/#enkele-laatste-tips-voor-het-maken-van-je-over-ons-pagina" title="Enkele laatste tips voor het maken van je over ons pagina">Enkele laatste tips voor het maken van je over ons pagina</a></li></ul></nav></div>
+</div>
+				</div>
+				</div>
+					</div>
+				</div>
+				<div class="elementor-element elementor-element-eff1a0f blog-content elementor-widget elementor-widget-theme-post-content" data-id="eff1a0f" data-element_type="widget" data-widget_type="theme-post-content.default">
+				<div class="elementor-widget-container">
+			<h2>Hoe belangrijk is de over ons pagina?</h2>
+<p>Er kunnen verschillende redenen zijn waarom een bezoeker je over ons pagina bekijkt. Bijvoorbeeld:</p>
+<ul>
+<li>Om te controleren of je website wel betrouwbaar is, net voor het plaatsen van een aankoop.</li>
+<li>Om te kijken of je website interessant genoeg is voor een eventuele samenwerking.</li>
+<li>Maar het kan ook zijn dat de bezoeker gewoon aan het oriënteren is en iets meer over je website te weten wil komen.</li>
+</ul>
+<p>In de eerste 2 voorbeelden kan de over ons pagina dus echt een verschil maken. Maar de vraag is nu: hoe vaak bekijken bezoekers deze pagina nu echt?</p>
+<p>Als ik naar de statistieken van SuperBlogger kijk, bekijkt <strong>gemiddeld 0,5%</strong> van mijn bezoekers de over pagina. Maar deze bezoekers bekijken gemiddeld wel 5.3 pagina’s en spenderen meer dan 6 minuten op de website.</p>
+<p>Deze bezoeker zijn dus meer geïnteresseerd en willen misschien wel contact op nemen of deelnemen aan een workshop. De over pagina mag deze bezoekers dan niet teleurstellen en wegjagen.</p>
+		<div data-elementor-type="section" data-elementor-id="5632" class="elementor elementor-5632 elementor-location-single" data-elementor-post-type="elementor_library">
+			<div class="elementor-element elementor-element-eeb0be3 e-flex e-con-boxed e-con e-parent" data-id="eeb0be3" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}" data-core-v316-plus="true">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-d81ed23 e-flex e-con-boxed e-con e-child" data-id="d81ed23" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;content_width&quot;:&quot;boxed&quot;}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-eb0cde9 e-flex e-con-boxed e-con e-child" data-id="eb0cde9" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-1c4a891 e-con-full e-flex e-con e-child" data-id="1c4a891" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+				<div class="elementor-element elementor-element-e16ded8 cta-heading elementor-widget elementor-widget-heading" data-id="e16ded8" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Op basis van 100+ geanalyseerde over pagina's</p>		</div>
+				</div>
+				<div class="elementor-element elementor-element-06d2d01 cta-heading elementor-widget elementor-widget-heading" data-id="06d2d01" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Ontvang mijn beste tips voor een sterke 'over mij' tekst</p>		</div>
+				</div>
+				<div class="elementor-element elementor-element-3db62d4 elementor-widget elementor-widget-text-editor" data-id="3db62d4" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<p>✅ <span style="background-color: var( --e-global-color-f6da648 ); color: var( --e-global-color-text ); font-size: 18px; text-align: var(--text-align);">Ontdek hoe jij jezelf online voor kan stellen én verbinding kan maken met je doelgroep!</span></p>						</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-633f498 e-flex e-con-boxed e-con e-child" data-id="633f498" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-dc721e3 e-transform elementor-widget elementor-widget-image" data-id="dc721e3" data-element_type="widget" data-settings="{&quot;_transform_rotateZ_effect&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:2,&quot;sizes&quot;:[]},&quot;_transform_rotateZ_effect_mobile&quot;:{&quot;unit&quot;:&quot;deg&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;_transform_rotateZ_effect_tablet&quot;:{&quot;unit&quot;:&quot;deg&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+													<img fetchpriority="high" decoding="async" width="460" height="541" src="./img_files/promo-ebook.png" class="attachment-large size-large wp-image-5633 lazyloaded" alt="Promo ebook" sizes="(max-width: 460px) 100vw, 460px" srcset="https://superblogger.nl/wp-content/uploads/2024/02/promo-ebook.png 460w, https://superblogger.nl/wp-content/uploads/2024/02/promo-ebook-255x300.png 255w" data-ll-status="loaded"><noscript><img fetchpriority="high" fetchpriority="high" decoding="async" width="460" height="541" src="https://superblogger.nl/wp-content/uploads/2024/02/promo-ebook.png" class="attachment-large size-large wp-image-5633" alt="Promo ebook" srcset="https://superblogger.nl/wp-content/uploads/2024/02/promo-ebook.png 460w, https://superblogger.nl/wp-content/uploads/2024/02/promo-ebook-255x300.png 255w" sizes="(max-width: 460px) 100vw, 460px" /></noscript>													</div>
+				</div>
+					</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-7ffa0c1 e-flex e-con-boxed e-con e-child" data-id="7ffa0c1" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-66e0417 elementor-button-align-start elementor-widget elementor-widget-form" data-id="66e0417" data-element_type="widget" data-settings="{&quot;step_next_label&quot;:&quot;Next&quot;,&quot;step_previous_label&quot;:&quot;Previous&quot;,&quot;button_width&quot;:&quot;100&quot;,&quot;step_type&quot;:&quot;number_text&quot;,&quot;step_icon_shape&quot;:&quot;circle&quot;}" data-widget_type="form.default">
+				<div class="elementor-widget-container">
+					<form class="elementor-form" method="post" name="Nieuw Formulier">
+			<input type="hidden" name="post_id" value="5632">
+			<input type="hidden" name="form_id" value="66e0417">
+			<input type="hidden" name="referer_title" value="Over ons pagina maken? 5 voorbeelden ter inspiratie!">
+
+							<input type="hidden" name="queried_id" value="2986">
+			
+			<div class="elementor-form-fields-wrapper elementor-labels-">
+								<div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-FirstName elementor-col-50">
+												<label for="form-field-FirstName" class="elementor-field-label elementor-screen-only">
+								Naam							</label>
+														<input size="1" type="text" name="form_fields[FirstName]" id="form-field-FirstName" class="elementor-field elementor-size-md  elementor-field-textual" placeholder="Naam">
+											</div>
+								<div class="elementor-field-type-email elementor-field-group elementor-column elementor-field-group-EmailAddress elementor-col-50 elementor-field-required">
+												<label for="form-field-EmailAddress" class="elementor-field-label elementor-screen-only">
+								Email							</label>
+														<input size="1" type="email" name="form_fields[EmailAddress]" id="form-field-EmailAddress" class="elementor-field elementor-size-md  elementor-field-textual" placeholder="E-mailadres" required="required" aria-required="true">
+											</div>
+								<div class="elementor-field-type-checkbox elementor-field-group elementor-column elementor-field-group-Newsletter elementor-col-100">
+					<div class="elementor-field-subgroup  "><span class="elementor-field-option"><input type="checkbox" value="Ja" id="form-field-Newsletter-0" name="form_fields[Newsletter]"> <label for="form-field-Newsletter-0">Ik meld mij ook aan voor de Content Marathon Nieuwbsrief</label></span></div>				</div>
+								<div class="elementor-field-type-hidden elementor-field-group elementor-column elementor-field-group-list_id elementor-col-100">
+													<input size="1" type="hidden" name="form_fields[list_id]" id="form-field-list_id" class="elementor-field elementor-size-md  elementor-field-textual" value="9b756d7c-6816-11ee-b7c4-5dcdaefd8d4d">
+											</div>
+								<div class="elementor-field-type-hidden elementor-field-group elementor-column elementor-field-group-tag elementor-col-100">
+													<input size="1" type="hidden" name="form_fields[tag]" id="form-field-tag" class="elementor-field elementor-size-md  elementor-field-textual" value="Over Ons Vragenlijst, SuperBlogger">
+											</div>
+								<div class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-100 e-form__buttons">
+					<button type="submit" class="elementor-button elementor-size-sm">
+						<span>
+															<span class="elementor-align-icon-right elementor-button-icon">
+									<i aria-hidden="true" class="far fa-check-circle"></i>																	</span>
+																						<span class="elementor-button-text">Ik wil indruk maken</span>
+													</span>
+					</button>
+				</div>
+			</div>
+		</form>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-06d90de privacylink tekst-no-margin elementor-widget elementor-widget-text-editor" data-id="06d90de" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<p>Je gegevens worden gebruikt voor het versturen van mijn ebook, zoals omschreven in onze <a href="https://superblogger.nl//privacyverklaring/">privacyverklaring</a>.</p>						</div>
+				</div>
+					</div>
+				</div>
+					</div>
+				</div>
+					</div>
+				</div>
+				</div>
+		
+<h2>3 basisregels voor je over ons pagina</h2>
+<p>Maar hoe maak je dan een goede over ons pagina? Welke informatie deel je en in welke volgorde? Voordat ik enkele goede voorbeelden bespreek, wil ik eerst 3 ontzettend belangrijke regels delen. Dit is de basis waar wij straks mee verder gaan:</p>
+<h3>Regel 1: je over ons pagina draait nog steeds om de bezoeker</h3>
+<p>Dit klinkt misschien gek, maar ondanks dat de over ons pagina het woordje ‘ons’ bevat, hoort óók deze pagina nog over je bezoeker te gaan.</p>
+<p>Het doel van de pagina is namelijk om je bezoeker te overtuigen van jouw expertise. En dat doe je het beste door in te spelen op de verwachtingen en problemen van je bezoeker. Dat de bezoeker zich in je verhaal kan herkennen, is de sleutel tot een goede over ons pagina.</p>
+<h3>Regel 2: je over ons pagina moet tot een actie kunnen leiden</h3>
+<p>De over ons pagina mag geen pagina worden waar bezoekers vastlopen en vervolgens weggaan. Ook op deze pagina wil je dat bezoeker weer verder gaat of nog beter: tot actie overgaat.</p>
+<p>Verwerk dus altijd een call to action in je pagina. Dit kan zijn:</p>
+<ul>
+<li>Een vraag om feedback</li>
+<li>Een overzicht van je producten</li>
+<li>Een inschrijfformulier voor de nieuwsbrief</li>
+<li>Een overzicht van een aantal blogposts</li>
+<li>Buttons om je te volgen op social media</li>
+</ul>
+<p>Kies voor een conversie element dat voor jou belangrijk is en past bij je pagina.</p>
+<h3>Regel 3: de beste over ons pagina is een persoonlijke pagina</h3>
+<p>De bezoeker gaat naar je over ons pagina o.a. om erachter te komen wie je bent. Wie zijn de mensen achter het bedrijf waar ik iets van koop of waar ik een samenwerking mee wil starten? Dat is de vraag die je bezoeker heeft.</p>
+<p>Je wil dus niet dat je pagina te onpersoonlijk is. Laat duidelijk zien wie je bent en waar je voor staat. Dit kan met foto’s, quotes of nog beter: een video.</p>
+<h2>5 goede voorbeelden ter inspiratie</h2>
+<p>De basisregels zijn handig, maar je leest deze blogpost waarschijnlijk omdat je niet goed weet waar je moet beginnen. Welke informatie kan je het beste delen?</p>
+<p>Belangrijk: <strong>er is geen gouden formule voor het maken van een over ons pagina</strong>. De pagina moet passen bij de identiteit van jouw website, maar ook bij de verwachtingen van de klant. En dat maakt het lastig.</p>
+<p>Daarom deel ik niet 1 standaard template, maar 5 voorbeelden van goede over ons pagina’s. 5 voorbeelden die je als inspiratie voor je eigen pagina kan gebruiken.</p>
+<h3>1. Plantsome</h3>
+<div class="extra-note-box">
+<p class="boxtitel">Do’s</p>
+<ul>
+<li>Vertel hoe je bedrijf tot stand is gekomen. Welke ingrediënten hebben gezorgd voor jouw succesformule?</li>
+<li>Benoem het probleem van je bezoeker. Voor welke frustratie van je doelgroep bied je een oplossing?</li>
+</ul>
+</div>
+<p>Een goede over ons pagina hoeft niet super uitgebreid te zijn, maar kan juist ook <strong>kort en krachtig</strong> zijn! Een goed voorbeeld van zo’n pagina vind je op de website <a href="https://www.plantsome.nl/pages/over-ons" target="_blank" rel="noopener noreferrer">Plantsome</a>. De pagina is luchtig, persoonlijk, maar toch overtuigend.</p>
+<h4>Onderdelen van de pagina</h4>
+<ul>
+<li><strong>Het verhaal achter de oprichting</strong> – Wat heeft gezorgd voor de oprichting van het bedrijf? Je achtergrond kan je hier noemen, maar ook het probleem van de klant waar je een oplossing voor wil bieden.</li>
+<li><strong>De oprichters</strong> – Wie zijn de mensen achter het bedrijf en wat is hun onderscheidend vermogen? Waar zijn ze goed in?</li>
+<li><strong>Favoriete producten van de oprichters</strong> – Welke producten mag de bezoeker volgens de oprichters niet missen?</li>
+<li><strong>Blogpost aanraders</strong> – Een overzicht van de nieuwste of meest populaire blogposts.</li>
+</ul>
+<p><img decoding="async" class="alignnone wp-image-2997 size-full lazyloaded" src="./img_files/plantsome-over.jpg" alt="Voorbeeld Plantsome" width="880" height="455" sizes="(max-width: 880px) 100vw, 880px" srcset="https://superblogger.nl/wp-content/uploads/2020/07/plantsome-over.jpg 880w, https://superblogger.nl/wp-content/uploads/2020/07/plantsome-over-300x155.jpg 300w, https://superblogger.nl/wp-content/uploads/2020/07/plantsome-over-768x397.jpg 768w, https://superblogger.nl/wp-content/uploads/2020/07/plantsome-over-600x310.jpg 600w" data-ll-status="loaded"><noscript><img decoding="async" class="alignnone wp-image-2997 size-full" src="https://superblogger.nl//wp-content/uploads/2020/07/plantsome-over.jpg" alt="Voorbeeld Plantsome" width="880" height="455" srcset="https://superblogger.nl/wp-content/uploads/2020/07/plantsome-over.jpg 880w, https://superblogger.nl/wp-content/uploads/2020/07/plantsome-over-300x155.jpg 300w, https://superblogger.nl/wp-content/uploads/2020/07/plantsome-over-768x397.jpg 768w, https://superblogger.nl/wp-content/uploads/2020/07/plantsome-over-600x310.jpg 600w" sizes="(max-width: 880px) 100vw, 880px" /></noscript></p>
+<h3>2. SoChicken</h3>
+<div class="extra-note-box">
+<p class="boxtitel">Do’s</p>
+<ul>
+<li>Beschrijf kort, in enkele zinnen, waar je website over gaat of welk product/dienst je aanbiedt.</li>
+<li>Benoem het succes van je website of bedrijf. Hoeveel bezoekers heb je? In welke media ben je genoemd? Met welke andere bedrijven heb je samengewerkt?</li>
+</ul>
+</div>
+<p>Ben jij de enige persoon achter je website of blog? Vertel dan niet alleen iets over je website, maar <strong>ook over jou als persoon</strong>. Bijvoorbeeld, zoals <a href="https://sochicken.nl/over" target="_blank" rel="noopener noreferrer">SoChicken</a> doet. Op de pagina lees je niet alleen voor wie de website is bedoeld, maar ook wie de schrijver is achter de blog en wat hij allemaal graag doet.</p>
+<h4>Onderdelen van de pagina</h4>
+<ul>
+<li><strong>Korte inleiding over de website</strong> – Wat is het onderwerp van de website? Wat voor een soort content kan de bezoeker verwachten? Of wat is het doel van de website?</li>
+<li><strong>Over de schrijver</strong> – Wie schrijft dagelijks de verhalen op de website? Wanneer is de website opgericht en met welke redenen? Wat doet de schrijver verder nog?</li>
+<li><strong>Voor wie de blog is</strong> – Wat is de doelgroep van de website? Hoeveel bezoekers trekt de website? En hoeveel actieve volgers zijn er?</li>
+<li><strong>Waar de lezer het beste kan beginnen</strong> – Zijn er een aantal artikelen om mee te beginnen of kan de bezoeker zich inschrijven voor de nieuwsbrief?</li>
+</ul>
+<p><img decoding="async" class="alignnone wp-image-2995 size-full" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20880%20500&#39;%3E%3C/svg%3E" alt="Voorbeeld SoChicken" width="880" height="500" data-lazy-srcset="https://superblogger.nl/wp-content/uploads/2020/07/sochicken-over.jpg 880w, https://superblogger.nl/wp-content/uploads/2020/07/sochicken-over-300x170.jpg 300w, https://superblogger.nl/wp-content/uploads/2020/07/sochicken-over-768x436.jpg 768w, https://superblogger.nl/wp-content/uploads/2020/07/sochicken-over-600x341.jpg 600w" data-lazy-sizes="(max-width: 880px) 100vw, 880px" data-lazy-src="https://superblogger.nl//wp-content/uploads/2020/07/sochicken-over.jpg"><noscript><img decoding="async" class="alignnone wp-image-2995 size-full" src="https://superblogger.nl//wp-content/uploads/2020/07/sochicken-over.jpg" alt="Voorbeeld SoChicken" width="880" height="500" srcset="https://superblogger.nl/wp-content/uploads/2020/07/sochicken-over.jpg 880w, https://superblogger.nl/wp-content/uploads/2020/07/sochicken-over-300x170.jpg 300w, https://superblogger.nl/wp-content/uploads/2020/07/sochicken-over-768x436.jpg 768w, https://superblogger.nl/wp-content/uploads/2020/07/sochicken-over-600x341.jpg 600w" sizes="(max-width: 880px) 100vw, 880px" /></noscript></p>
+<h3>3. BrandNewDay</h3>
+<div class="extra-note-box">
+<p class="boxtitel">Do’s</p>
+<ul>
+<li>Voeg een video toe. Zo kunnen bezoekers zelf beslissen of ze liever de video bekijken of de tekst op de pagina lezen.</li>
+<li>Deel jouw visie op dat wat je doet. Wat is bijvoorbeeld kenmerkend voor jouw dienstverlening of werkwijze?</li>
+</ul>
+</div>
+<p>Een goede over ons pagina is een <strong>combinatie van tekst en design</strong>. Met goede teksten overtuig je de bezoeker en met een goed design zorg je ervoor dat bezoekers je tekst ook echt lezen. Ben je op zoek naar inspiratie? Een goed voorbeeld vind je op <a href="https://new.brandnewday.nl/over-ons/" target="_blank" rel="noopener noreferrer">BrandNewDay</a>. De boodschap is goed, maar ook het design ziet er gelikt uit, zowel op desktop als mobiel!</p>
+<h4>Onderdelen van de pagina</h4>
+<ul>
+<li><strong>Bedrijf in het kort</strong> – Zoals BrandNewDay het zo mooi noemt: wat is het DNA van je bedrijf? Wie ben je en wat is je onderscheidend vermogen?</li>
+<li><strong>Wat het bedrijf doet</strong> – Welke diensten/producten lever je aan welke klanten? En wat is het resultaat?</li>
+<li><strong>3 kenmerken over het bedrijf</strong> – Wat zijn de 3 belangrijkste kenmerken van je bedrijf? Licht deze ook kort toe.</li>
+<li><strong>Beloftes</strong> – Wat kan je de bezoeker beloven als het gaat om je dienstverlening? Wat is kenmerkend voor je werkwijze?</li>
+<li><strong>Call to action</strong> – Wat is de volgende stap voor de bezoeker? Welke diensten- of categoriepagina’s wil je dat bezoekers bekijken?</li>
+</ul>
+<p><img loading="lazy" decoding="async" class="alignnone wp-image-2994 size-full" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20880%20388&#39;%3E%3C/svg%3E" alt="Voorbeeld BrandNewDay" width="880" height="388" data-lazy-srcset="https://superblogger.nl/wp-content/uploads/2020/07/brandnewday-over.jpg 880w, https://superblogger.nl/wp-content/uploads/2020/07/brandnewday-over-300x132.jpg 300w, https://superblogger.nl/wp-content/uploads/2020/07/brandnewday-over-768x339.jpg 768w, https://superblogger.nl/wp-content/uploads/2020/07/brandnewday-over-600x265.jpg 600w" data-lazy-sizes="(max-width: 880px) 100vw, 880px" data-lazy-src="https://superblogger.nl//wp-content/uploads/2020/07/brandnewday-over.jpg"><noscript><img loading="lazy" loading="lazy" decoding="async" class="alignnone wp-image-2994 size-full" src="https://superblogger.nl//wp-content/uploads/2020/07/brandnewday-over.jpg" alt="Voorbeeld BrandNewDay" width="880" height="388" srcset="https://superblogger.nl/wp-content/uploads/2020/07/brandnewday-over.jpg 880w, https://superblogger.nl/wp-content/uploads/2020/07/brandnewday-over-300x132.jpg 300w, https://superblogger.nl/wp-content/uploads/2020/07/brandnewday-over-768x339.jpg 768w, https://superblogger.nl/wp-content/uploads/2020/07/brandnewday-over-600x265.jpg 600w" sizes="(max-width: 880px) 100vw, 880px" /></noscript></p>
+<h3>4. Skyscanner</h3>
+<div class="extra-note-box">
+<p class="boxtitel">Do’s</p>
+<ul>
+<li>Denk groot! Wat is het ultieme doel dat jij met je bedrijf wil bereiken? Deel dit met je bezoeker.</li>
+<li>Zeg veel met weinig woorden. Niets is krachtiger dan een goede slogan of een pakkende introductie. Probeer de kern van je bedrijf vervolgens kort samen te vatten in de subkoppen.</li>
+</ul>
+</div>
+<p>Wanneer de bezoeker op een pagina komt, wil je <strong>meteen de aandacht trekken</strong>. De eerste zin moet dus direct pakkend zijn! <a href="https://www.skyscanner.nl/over-ons" target="_blank" rel="noopener noreferrer">Skyscanner</a> doet dit heel goed. Lezers willen dankzij de tekst in de header direct weten wat dit voor hen betekent en zullen dus snel naar beneden scrollen!</p>
+<h4>Onderdelen van de pagina</h4>
+<ul>
+<li><strong>Belofte aan de (potentiële) klant</strong> – Hoe kan je de bezoeker helpen? Maak een belofte om je bezoeker te overtuigen.</li>
+<li><strong>Hoe het bedrijf is begonnen en waar het nu staat</strong> – Heeft je bedrijf een bijzondere groei doorgemaakt? Beschrijf het proces.</li>
+<li><strong>Missie (+ de praktische uitwerking daarvan)</strong> – Waar sta je voor als bedrijf en hoe komt dit tot uiting in de acties die je doet.</li>
+<li><strong>Reis tot nu toe</strong> – Welke mijlpalen heeft het bedrijf sinds de oprichting bereikt. Wat waren de voordelen hiervan voor de klant?</li>
+<li><strong>Aanbod</strong> – Sluit de over ons pagina met een call-to-action. Wat is de volgende stap voor de bezoeker?</li>
+</ul>
+<p><img loading="lazy" decoding="async" class="alignnone wp-image-2996 size-full" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20880%20500&#39;%3E%3C/svg%3E" alt="Voorbeeld Skyscanner" width="880" height="500" data-lazy-srcset="https://superblogger.nl/wp-content/uploads/2020/07/skyscanner-over.jpg 880w, https://superblogger.nl/wp-content/uploads/2020/07/skyscanner-over-300x170.jpg 300w, https://superblogger.nl/wp-content/uploads/2020/07/skyscanner-over-768x436.jpg 768w, https://superblogger.nl/wp-content/uploads/2020/07/skyscanner-over-600x341.jpg 600w" data-lazy-sizes="(max-width: 880px) 100vw, 880px" data-lazy-src="https://superblogger.nl//wp-content/uploads/2020/07/skyscanner-over.jpg"><noscript><img loading="lazy" loading="lazy" decoding="async" class="alignnone wp-image-2996 size-full" src="https://superblogger.nl//wp-content/uploads/2020/07/skyscanner-over.jpg" alt="Voorbeeld Skyscanner" width="880" height="500" srcset="https://superblogger.nl/wp-content/uploads/2020/07/skyscanner-over.jpg 880w, https://superblogger.nl/wp-content/uploads/2020/07/skyscanner-over-300x170.jpg 300w, https://superblogger.nl/wp-content/uploads/2020/07/skyscanner-over-768x436.jpg 768w, https://superblogger.nl/wp-content/uploads/2020/07/skyscanner-over-600x341.jpg 600w" sizes="(max-width: 880px) 100vw, 880px" /></noscript></p>
+<h3>5. Timewax</h3>
+<div class="extra-note-box">
+<p class="boxtitel">Do’s</p>
+<ul>
+<li>Gebruik quotes van oprichter(s) en/of medewerkers. Jezelf laten zien kan op verschillende manieren. Maak het persoonlijker door niet alleen een foto te tonen, maar ook de persoonlijke visie van de oprichters of teamleden te delen.</li>
+<li>Vertel niet alleen wat je doet, maar ook hoe je het doet en waarom je het doet. Zo krijgen bezoekers echt een goed beeld van wie je bent als organisatie en wat ze van je dienstverlening en/of producten kunnen verwachten.</li>
+</ul>
+</div>
+<p>Op de website van <a href="https://www.timewax.nl/bedrijf" target="_blank" rel="noopener noreferrer">Timewax</a> vind je een <strong>hele eenvoudige, maar ook hele duidelijke</strong> over ons pagina. Er wordt o.a. verteld wat het bedrijf doet, voor wie ze dit doen en waarom ze dit doen. De voordelen voor de klant worden duidelijk benoemd en na het bekijken van de pagina, kunnen bezoekers gelijk verder met de proefversie!</p>
+<h4>Onderdelen van de pagina</h4>
+<ul>
+<li><strong>Missie</strong> – Begin met een korte omschrijving van de bestaansreden van je organisatie. Waar sta je voor en wat wil je uitdragen?</li>
+<li><strong>Waarom je doet wat je doet</strong> – Waar wil je de doelgroep mee helpen en waarom wil je dit? Wat is je visie op de producten en diensten die je levert?</li>
+<li><strong>Werkwijze</strong> – Hoe help je jouw doelgroep. Wat is er bijzonder aan de producten en/of diensten die je levert?</li>
+<li><strong>Diensten</strong> – Welke concrete diensten of producten lever je? Uit welke onderdelen of categorieën bestaan deze?</li>
+<li><strong>Call to action</strong> – Wat is de volgende stap voor je bezoeker? Heb je een gratis product waarmee de bezoeker meer informatie kan krijgen over je aanbod?</li>
+</ul>
+<p><img loading="lazy" decoding="async" class="alignnone wp-image-2993 size-full" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20880%20489&#39;%3E%3C/svg%3E" alt="Voorbeeld Timewax" width="880" height="489" data-lazy-srcset="https://superblogger.nl/wp-content/uploads/2020/07/timewax-over.jpg 880w, https://superblogger.nl/wp-content/uploads/2020/07/timewax-over-300x167.jpg 300w, https://superblogger.nl/wp-content/uploads/2020/07/timewax-over-768x427.jpg 768w, https://superblogger.nl/wp-content/uploads/2020/07/timewax-over-600x333.jpg 600w" data-lazy-sizes="(max-width: 880px) 100vw, 880px" data-lazy-src="https://superblogger.nl//wp-content/uploads/2020/07/timewax-over.jpg"><noscript><img loading="lazy" loading="lazy" decoding="async" class="alignnone wp-image-2993 size-full" src="https://superblogger.nl//wp-content/uploads/2020/07/timewax-over.jpg" alt="Voorbeeld Timewax" width="880" height="489" srcset="https://superblogger.nl/wp-content/uploads/2020/07/timewax-over.jpg 880w, https://superblogger.nl/wp-content/uploads/2020/07/timewax-over-300x167.jpg 300w, https://superblogger.nl/wp-content/uploads/2020/07/timewax-over-768x427.jpg 768w, https://superblogger.nl/wp-content/uploads/2020/07/timewax-over-600x333.jpg 600w" sizes="(max-width: 880px) 100vw, 880px" /></noscript></p>
+<h2 id="templates">Bouw je over ons pagina met Elementor</h2>
+<p>Heb je een website met WordPress en wil je eenvoudig een over ons pagina maken die uit verschillende onderdelen bestaat?</p>
+<p>Dan kan ik je de <a href="https://superblogger.nl/elementor-voor-wordpress/">page builder Elementor</a> aanraden. Daarmee klik je heel eenvoudig pagina’s in elkaar zonder een regel code te schrijven.</p>
+<p>Elementor is een plugin die goed samenwerkt met de meeste WordPress templates. Je kan de plugin dus vaak gewoon toevoegen aan je website en gebruiken voor nieuwe pagina’s.</p>
+<p class="extra-tip-box"><strong>Let op!</strong> Maak altijd eerst een backup van je website voor je Elementor toevoegt, zodat je altijd terug kan als het niet goed gaat. Of vraag je webbouwer om hulp.</p>
+<p>Speciaal voor mijn lezers heb ik twee templates gemaakt die je zo kan gebruiken voor je over pagina:</p>
+<div class="row">
+<div class="col-md-6 col-left">
+<figure id="attachment_5591" aria-describedby="caption-attachment-5591" style="width: 600px" class="wp-caption alignnone"><img loading="lazy" decoding="async" class="wp-image-5591 size-full" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20600%201409&#39;%3E%3C/svg%3E" alt="Over ons webshop" width="600" height="1409" data-lazy-srcset="https://superblogger.nl/wp-content/uploads/2020/07/over-ons-webshop.jpg 600w, https://superblogger.nl/wp-content/uploads/2020/07/over-ons-webshop-128x300.jpg 128w, https://superblogger.nl/wp-content/uploads/2020/07/over-ons-webshop-436x1024.jpg 436w" data-lazy-sizes="(max-width: 600px) 100vw, 600px" data-lazy-src="https://superblogger.nl/wp-content/uploads/2020/07/over-ons-webshop.jpg"><noscript><img loading="lazy" loading="lazy" decoding="async" class="wp-image-5591 size-full" src="https://superblogger.nl/wp-content/uploads/2020/07/over-ons-webshop.jpg" alt="Over ons webshop" width="600" height="1409" srcset="https://superblogger.nl/wp-content/uploads/2020/07/over-ons-webshop.jpg 600w, https://superblogger.nl/wp-content/uploads/2020/07/over-ons-webshop-128x300.jpg 128w, https://superblogger.nl/wp-content/uploads/2020/07/over-ons-webshop-436x1024.jpg 436w" sizes="(max-width: 600px) 100vw, 600px" /></noscript><figcaption id="caption-attachment-5591" class="wp-caption-text">Over ons pagina voor een honden webshop</figcaption></figure>
+</div>
+<div class="col-md-6 col-right">
+<figure id="attachment_5590" aria-describedby="caption-attachment-5590" style="width: 600px" class="wp-caption alignnone"><img loading="lazy" decoding="async" class="wp-image-5590 size-full" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20600%201450&#39;%3E%3C/svg%3E" alt="Bedrijfswebsite" width="600" height="1450" data-lazy-srcset="https://superblogger.nl/wp-content/uploads/2020/07/over-ons-bedrijfswebsite.jpg 600w, https://superblogger.nl/wp-content/uploads/2020/07/over-ons-bedrijfswebsite-124x300.jpg 124w, https://superblogger.nl/wp-content/uploads/2020/07/over-ons-bedrijfswebsite-424x1024.jpg 424w" data-lazy-sizes="(max-width: 600px) 100vw, 600px" data-lazy-src="https://superblogger.nl/wp-content/uploads/2020/07/over-ons-bedrijfswebsite.jpg"><noscript><img loading="lazy" loading="lazy" decoding="async" class="wp-image-5590 size-full" src="https://superblogger.nl/wp-content/uploads/2020/07/over-ons-bedrijfswebsite.jpg" alt="Bedrijfswebsite" width="600" height="1450" srcset="https://superblogger.nl/wp-content/uploads/2020/07/over-ons-bedrijfswebsite.jpg 600w, https://superblogger.nl/wp-content/uploads/2020/07/over-ons-bedrijfswebsite-124x300.jpg 124w, https://superblogger.nl/wp-content/uploads/2020/07/over-ons-bedrijfswebsite-424x1024.jpg 424w" sizes="(max-width: 600px) 100vw, 600px" /></noscript><figcaption id="caption-attachment-5590" class="wp-caption-text">Over ons pagina voor een social media coach</figcaption></figure>
+</div>
+</div>
+<p>Je hoeft alleen de inhoud aan te passen en je eigen huisstijl toe te passen, maar dat gaat echt heel makkelijk.</p>
+<p>Mocht je een van deze templates willen gebruiken voor je eigen website. Laat dan hieronder je gegevens achter, dan stuur ik je de templates!</p>
+		<div data-elementor-type="section" data-elementor-id="5586" class="elementor elementor-5586 elementor-location-single" data-elementor-post-type="elementor_library">
+			<div class="elementor-element elementor-element-e07f270 e-flex e-con-boxed e-con e-parent" data-id="e07f270" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}" data-core-v316-plus="true">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-59232b5 e-flex e-con-boxed e-con e-child" data-id="59232b5" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;content_width&quot;:&quot;boxed&quot;}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-f7efea9 e-con-full e-flex e-con e-child" data-id="f7efea9" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+		<div class="elementor-element elementor-element-7ec749a e-con-full e-flex e-con e-child" data-id="7ec749a" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+				<div class="elementor-element elementor-element-bb58066 elementor-widget elementor-widget-image" data-id="bb58066" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+													<img loading="lazy" decoding="async" width="419" height="460" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20419%20460&#39;%3E%3C/svg%3E" class="attachment-large size-large wp-image-3968" alt="Aanmelding mailinglijst" data-lazy-srcset="https://superblogger.nl/wp-content/uploads/2023/01/aanmelding-nieuwsbrief-img.png 419w, https://superblogger.nl/wp-content/uploads/2023/01/aanmelding-nieuwsbrief-img-273x300.png 273w" data-lazy-sizes="(max-width: 419px) 100vw, 419px" data-lazy-src="https://superblogger.nl/wp-content/uploads/2023/01/aanmelding-nieuwsbrief-img.png"><noscript><img loading="lazy" loading="lazy" decoding="async" width="419" height="460" src="https://superblogger.nl/wp-content/uploads/2023/01/aanmelding-nieuwsbrief-img.png" class="attachment-large size-large wp-image-3968" alt="Aanmelding mailinglijst" srcset="https://superblogger.nl/wp-content/uploads/2023/01/aanmelding-nieuwsbrief-img.png 419w, https://superblogger.nl/wp-content/uploads/2023/01/aanmelding-nieuwsbrief-img-273x300.png 273w" sizes="(max-width: 419px) 100vw, 419px" /></noscript>													</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-f3ea5a6 e-flex e-con-boxed e-con e-child" data-id="f3ea5a6" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-2cac3ec cta-heading elementor-widget elementor-widget-heading" data-id="2cac3ec" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Gratis 'over ons' templates</p>		</div>
+				</div>
+				<div class="elementor-element elementor-element-dcf27e0 cta-heading elementor-widget elementor-widget-heading" data-id="dcf27e0" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Bouw eenvoudig je website met Elementor</p>		</div>
+				</div>
+					</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-4230316 e-con-full e-flex e-con e-child" data-id="4230316" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+				<div class="elementor-element elementor-element-9a907e0 elementor-button-align-start form-check-wit elementor-widget elementor-widget-form" data-id="9a907e0" data-element_type="widget" data-settings="{&quot;step_next_label&quot;:&quot;Next&quot;,&quot;step_previous_label&quot;:&quot;Previous&quot;,&quot;button_width&quot;:&quot;100&quot;,&quot;step_type&quot;:&quot;number_text&quot;,&quot;step_icon_shape&quot;:&quot;circle&quot;}" data-widget_type="form.default">
+				<div class="elementor-widget-container">
+					<form class="elementor-form" method="post" name="Nieuw Formulier">
+			<input type="hidden" name="post_id" value="5586">
+			<input type="hidden" name="form_id" value="9a907e0">
+			<input type="hidden" name="referer_title" value="Over ons pagina maken? 5 voorbeelden ter inspiratie!">
+
+							<input type="hidden" name="queried_id" value="2986">
+			
+			<div class="elementor-form-fields-wrapper elementor-labels-">
+								<div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-FirstName elementor-col-50">
+												<label for="form-field-FirstName" class="elementor-field-label elementor-screen-only">
+								Naam							</label>
+														<input size="1" type="text" name="form_fields[FirstName]" id="form-field-FirstName" class="elementor-field elementor-size-md  elementor-field-textual" placeholder="Naam">
+											</div>
+								<div class="elementor-field-type-email elementor-field-group elementor-column elementor-field-group-EmailAddress elementor-col-50 elementor-field-required">
+												<label for="form-field-EmailAddress" class="elementor-field-label elementor-screen-only">
+								Email							</label>
+														<input size="1" type="email" name="form_fields[EmailAddress]" id="form-field-EmailAddress" class="elementor-field elementor-size-md  elementor-field-textual" placeholder="E-mailadres" required="required" aria-required="true">
+											</div>
+								<div class="elementor-field-type-checkbox elementor-field-group elementor-column elementor-field-group-Newsletter elementor-col-100">
+					<div class="elementor-field-subgroup  "><span class="elementor-field-option"><input type="checkbox" value="Ja" id="form-field-Newsletter-0" name="form_fields[Newsletter]"> <label for="form-field-Newsletter-0">Ik meld mij ook aan voor de Content Marathon Nieuwbsrief</label></span></div>				</div>
+								<div class="elementor-field-type-hidden elementor-field-group elementor-column elementor-field-group-list_id elementor-col-100">
+													<input size="1" type="hidden" name="form_fields[list_id]" id="form-field-list_id" class="elementor-field elementor-size-md  elementor-field-textual" value="9b756d7c-6816-11ee-b7c4-5dcdaefd8d4d">
+											</div>
+								<div class="elementor-field-type-hidden elementor-field-group elementor-column elementor-field-group-tag elementor-col-100">
+													<input size="1" type="hidden" name="form_fields[tag]" id="form-field-tag" class="elementor-field elementor-size-md  elementor-field-textual" value="Over Ons Templates, SuperBlogger">
+											</div>
+								<div class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-100 e-form__buttons">
+					<button type="submit" class="elementor-button elementor-size-sm">
+						<span>
+															<span class="elementor-align-icon-right elementor-button-icon">
+									<i aria-hidden="true" class="far fa-check-circle"></i>																	</span>
+																						<span class="elementor-button-text">Aanmelden</span>
+													</span>
+					</button>
+				</div>
+			</div>
+		</form>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-38791dc privacylink tekst-no-margin elementor-widget elementor-widget-text-editor" data-id="38791dc" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<p>Je gegevens worden gebruikt voor het versturen van de templates en 2 extra mails over het maken van een geweldige ‘over’ pagina, zoals omschreven in onze <a href="https://superblogger.nl//privacyverklaring/">privacyverklaring</a>.</p>						</div>
+				</div>
+				</div>
+					</div>
+				</div>
+					</div>
+				</div>
+				</div>
+		
+<h2>Infographic met de 5 templates</h2>
+<p>Hieronder een overzicht van de 5 templates die ik in deze blogpost heb besproken:</p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-2989" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20900%201521&#39;%3E%3C/svg%3E" alt="Infographic met de 5 over ons pagina templates" width="900" height="1521" data-lazy-srcset="https://superblogger.nl/wp-content/uploads/2020/07/afbeelding-over-ons-pagina-maken.jpg 900w, https://superblogger.nl/wp-content/uploads/2020/07/afbeelding-over-ons-pagina-maken-178x300.jpg 178w, https://superblogger.nl/wp-content/uploads/2020/07/afbeelding-over-ons-pagina-maken-606x1024.jpg 606w, https://superblogger.nl/wp-content/uploads/2020/07/afbeelding-over-ons-pagina-maken-768x1298.jpg 768w, https://superblogger.nl/wp-content/uploads/2020/07/afbeelding-over-ons-pagina-maken-639x1080.jpg 639w, https://superblogger.nl/wp-content/uploads/2020/07/afbeelding-over-ons-pagina-maken-600x1014.jpg 600w" data-lazy-sizes="(max-width: 900px) 100vw, 900px" data-lazy-src="https://superblogger.nl//wp-content/uploads/2020/07/afbeelding-over-ons-pagina-maken.jpg"><noscript><img loading="lazy" loading="lazy" decoding="async" class="alignnone size-full wp-image-2989" src="https://superblogger.nl//wp-content/uploads/2020/07/afbeelding-over-ons-pagina-maken.jpg" alt="Infographic met de 5 over ons pagina templates" width="900" height="1521" srcset="https://superblogger.nl/wp-content/uploads/2020/07/afbeelding-over-ons-pagina-maken.jpg 900w, https://superblogger.nl/wp-content/uploads/2020/07/afbeelding-over-ons-pagina-maken-178x300.jpg 178w, https://superblogger.nl/wp-content/uploads/2020/07/afbeelding-over-ons-pagina-maken-606x1024.jpg 606w, https://superblogger.nl/wp-content/uploads/2020/07/afbeelding-over-ons-pagina-maken-768x1298.jpg 768w, https://superblogger.nl/wp-content/uploads/2020/07/afbeelding-over-ons-pagina-maken-639x1080.jpg 639w, https://superblogger.nl/wp-content/uploads/2020/07/afbeelding-over-ons-pagina-maken-600x1014.jpg 600w" sizes="(max-width: 900px) 100vw, 900px" /></noscript></p>
+<h2>Enkele laatste tips voor het maken van je over ons pagina</h2>
+<p>Heb je een template voor je pagina gekozen? Gebruik dan de laatste 5 tips om de pagina af te maken.</p>
+<ul>
+<li><strong>Deel alleen wat belangrijk is voor de lezer</strong>. Je over ons pagina hoeft niet je hele levensverhaal of bedrijfshistorie te bevatten. Deel alleen wat de bezoeker echt zou moeten weten.</li>
+<li><strong>Spreek de lezer direct aan</strong>. Bezoekers die op de over pagina komen willen jou of je bedrijf leren kennen. Hou het informeel en schrijf alsof je tegen de lezer praat.</li>
+<li><strong>Gebruik geen zoekwoord</strong>. De over ons pagina is niet de eerste pagina die bezoekers vanuit Google zouden moeten vinden. Gebruik dus niet een van je belangrijke zoekwoorden voor deze pagina.</li>
+<li><strong>Update de pagina regelmatig</strong>. Het is belangrijk dat je over ons pagina representatief is voor je bedrijf of blog. Je wilt dus dat de over pagina meegroeit met je bedrijf.</li>
+<li><strong>Geef een kijkje achter de schermen</strong>. De bezoeker moet eigenlijk direct een beeld krijgen van hoe het er binnen je bedrijf aan toe gaat. Deel foto’s of vertel iets over je werkwijze.</li>
+</ul>
+		</div>
+				</div>
+				<div class="elementor-element elementor-element-e9c9751 elementor-position-left elementor-vertical-align-middle elementor-widget elementor-widget-image-box" data-id="e9c9751" data-element_type="widget" data-widget_type="image-box.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.19.0 - 07-02-2024 */
+.elementor-widget-image-box .elementor-image-box-content{width:100%}@media (min-width:768px){.elementor-widget-image-box.elementor-position-left .elementor-image-box-wrapper,.elementor-widget-image-box.elementor-position-right .elementor-image-box-wrapper{display:flex}.elementor-widget-image-box.elementor-position-right .elementor-image-box-wrapper{text-align:right;flex-direction:row-reverse}.elementor-widget-image-box.elementor-position-left .elementor-image-box-wrapper{text-align:left;flex-direction:row}.elementor-widget-image-box.elementor-position-top .elementor-image-box-img{margin:auto}.elementor-widget-image-box.elementor-vertical-align-top .elementor-image-box-wrapper{align-items:flex-start}.elementor-widget-image-box.elementor-vertical-align-middle .elementor-image-box-wrapper{align-items:center}.elementor-widget-image-box.elementor-vertical-align-bottom .elementor-image-box-wrapper{align-items:flex-end}}@media (max-width:767px){.elementor-widget-image-box .elementor-image-box-img{margin-left:auto!important;margin-right:auto!important;margin-bottom:15px}}.elementor-widget-image-box .elementor-image-box-img{display:inline-block}.elementor-widget-image-box .elementor-image-box-title a{color:inherit}.elementor-widget-image-box .elementor-image-box-wrapper{text-align:center}.elementor-widget-image-box .elementor-image-box-description{margin:0}</style><div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img loading="lazy" width="146" height="159" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20146%20159&#39;%3E%3C/svg%3E" class="attachment-full size-full wp-image-3806" alt="" data-lazy-src="https://superblogger.nl/wp-content/uploads/2022/10/sharon-img.png"><noscript><img loading="lazy" width="146" height="159" src="https://superblogger.nl/wp-content/uploads/2022/10/sharon-img.png" class="attachment-full size-full wp-image-3806" alt="" /></noscript></figure><div class="elementor-image-box-content"><h3 class="elementor-image-box-title">Vragen over deze blogpost?</h3><p class="elementor-image-box-description">Je mag mij altijd een <a href="mailto:sharon@superblogger.nl">mailtje</a> sturen met je vraag! </p></div></div>		</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-812eb75 e-con-full blog-sidebar e-flex e-con e-child" data-id="812eb75" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+		<div class="elementor-element elementor-element-437256f e-flex e-con-boxed e-con e-child" data-id="437256f" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-7671258 e-con-full e-flex e-con e-child" data-id="7671258" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+				<div class="elementor-element elementor-element-66e1c25 elementor-widget elementor-widget-heading" data-id="66e1c25" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Gepubliceerd op</p>		</div>
+				</div>
+				<div class="elementor-element elementor-element-e6643b3 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="e6643b3" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+			<link rel="stylesheet" href="./img_files/widget-icon-list.min.css">		<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="far fa-calendar-alt"></i>						</span>
+										<span class="elementor-icon-list-text">27/07/2020</span>
+									</li>
+						</ul>
+				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-23ea98a e-con-full e-flex e-con e-child" data-id="23ea98a" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+				<div class="elementor-element elementor-element-2ba822e elementor-widget elementor-widget-heading" data-id="2ba822e" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">BiJgewerkt op</p>		</div>
+				</div>
+				<div class="elementor-element elementor-element-0866cb5 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="0866cb5" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-edit"></i>						</span>
+										<span class="elementor-icon-list-text">17/02/2024</span>
+									</li>
+						</ul>
+				</div>
+				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-ac40af1 e-flex e-con-boxed e-con e-child" data-id="ac40af1" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-47f6a29 e-con-full e-flex e-con e-child" data-id="47f6a29" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+				<div class="elementor-element elementor-element-2faf418 elementor-widget elementor-widget-heading" data-id="2faf418" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Auteur</p>		</div>
+				</div>
+				<div class="elementor-element elementor-element-5c04b07 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="5c04b07" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-user-circle"></i>						</span>
+										<span class="elementor-icon-list-text">Sharon</span>
+									</li>
+						</ul>
+				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-f6cd4a1 e-con-full e-flex e-con e-child" data-id="f6cd4a1" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+				<div class="elementor-element elementor-element-28c9541 elementor-widget elementor-widget-heading" data-id="28c9541" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Leestijd</p>		</div>
+				</div>
+				<div class="elementor-element elementor-element-570de5b elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="570de5b" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-eye"></i>						</span>
+										<span class="elementor-icon-list-text">11 minuten</span>
+									</li>
+						</ul>
+				</div>
+				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-a158b34 elementor-hidden-tablet elementor-hidden-mobile e-flex e-con-boxed e-con e-child elementor-sticky" data-id="a158b34" data-element_type="container" data-settings="{&quot;sticky&quot;:&quot;top&quot;,&quot;sticky_offset&quot;:15,&quot;sticky_parent&quot;:&quot;yes&quot;,&quot;sticky_effects_offset&quot;:15,&quot;content_width&quot;:&quot;boxed&quot;,&quot;sticky_on&quot;:[&quot;desktop&quot;,&quot;tablet&quot;,&quot;mobile&quot;]}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-a48ba3d e-flex e-con-boxed e-con e-child" data-id="a48ba3d" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;content_width&quot;:&quot;boxed&quot;}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-1eb1678 elementor-widget elementor-widget-shortcode" data-id="1eb1678" data-element_type="widget" data-widget_type="shortcode.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-shortcode"><div id="ez-toc-container" class="ez-toc-v2_0_59 counter-flat ez-toc-counter ez-toc-transparent ez-toc-container-direction">
+<div class="ez-toc-title-container">
+<p class="ez-toc-title ">In deze blogpost:</p>
+<span class="ez-toc-title-toggle"></span></div>
+<nav><ul class="ez-toc-list ez-toc-list-level-1 "><li class="ez-toc-page-1"><a class="ez-toc-link ez-toc-heading-1" href="https://superblogger.nl/over-ons-pagina-maken/#hoe-belangrijk-is-de-over-ons-pagina" title="Hoe belangrijk is de over ons pagina?">Hoe belangrijk is de over ons pagina?</a></li><li class="ez-toc-page-1"><a class="ez-toc-link ez-toc-heading-2" href="https://superblogger.nl/over-ons-pagina-maken/#3-basisregels-voor-je-over-ons-pagina" title="3 basisregels voor je over ons pagina">3 basisregels voor je over ons pagina</a></li><li class="ez-toc-page-1"><a class="ez-toc-link ez-toc-heading-3" href="https://superblogger.nl/over-ons-pagina-maken/#5-goede-voorbeelden-ter-inspiratie" title="5 goede voorbeelden ter inspiratie">5 goede voorbeelden ter inspiratie</a></li><li class="ez-toc-page-1"><a class="ez-toc-link ez-toc-heading-4" href="https://superblogger.nl/over-ons-pagina-maken/#bouw-je-over-ons-pagina-met-elementor" title="Bouw je over ons pagina met Elementor">Bouw je over ons pagina met Elementor</a></li><li class="ez-toc-page-1"><a class="ez-toc-link ez-toc-heading-5" href="https://superblogger.nl/over-ons-pagina-maken/#infographic-met-de-5-templates" title="Infographic met de 5 templates">Infographic met de 5 templates</a></li><li class="ez-toc-page-1"><a class="ez-toc-link ez-toc-heading-6" href="https://superblogger.nl/over-ons-pagina-maken/#enkele-laatste-tips-voor-het-maken-van-je-over-ons-pagina" title="Enkele laatste tips voor het maken van je over ons pagina">Enkele laatste tips voor het maken van je over ons pagina</a></li></ul></nav></div>
+</div>
+				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-ec152da e-con-full e-flex e-con e-child" data-id="ec152da" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
+				<div class="elementor-element elementor-element-a2a4140 cta-heading elementor-widget elementor-widget-heading" data-id="a2a4140" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Ontvang 2 gratis templates voor je 'over' pagina</p>		</div>
+				</div>
+				<div class="elementor-element elementor-element-3860d00 elementor-align-left elementor-widget elementor-widget-button" data-id="3860d00" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a class="elementor-button elementor-button-link elementor-size-sm" href="https://superblogger.nl/over-ons-pagina-maken/#templates">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-icon elementor-align-icon-right">
+				<i aria-hidden="true" class="fas fa-arrow-circle-right"></i>			</span>
+						<span class="elementor-button-text">Dat wil ik wel!</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+				</div>
+					</div>
+				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-12a3c4f e-flex e-con-boxed e-con e-parent" data-id="12a3c4f" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}" data-core-v316-plus="true">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-9fe7aae elementor-widget elementor-widget-heading" data-id="9fe7aae" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Gerelateerde berichten</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-d67f7e3 elementor-grid-3 elementor-grid-tablet-2 elementor-grid-mobile-1 elementor-widget elementor-widget-loop-grid" data-id="d67f7e3" data-element_type="widget" data-settings="{&quot;template_id&quot;:&quot;3774&quot;,&quot;row_gap_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:30,&quot;sizes&quot;:[]},&quot;row_gap_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:30,&quot;sizes&quot;:[]},&quot;_skin&quot;:&quot;post&quot;,&quot;columns&quot;:&quot;3&quot;,&quot;columns_tablet&quot;:&quot;2&quot;,&quot;columns_mobile&quot;:&quot;1&quot;,&quot;edit_handle_selector&quot;:&quot;[data-elementor-type=\&quot;loop-item\&quot;]&quot;,&quot;row_gap&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}" data-widget_type="loop-grid.post">
+				<div class="elementor-widget-container">
+			<link rel="stylesheet" href="./img_files/widget-loop-builder.min.css">		<div class="elementor-loop-container elementor-grid">
+		<style id="loop-3774">.elementor-3774 .elementor-element.elementor-element-490363e{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--gap:10px 10px;--background-transition:0.3s;--padding-block-start:0px;--padding-block-end:0px;--padding-inline-start:0px;--padding-inline-end:0px;}.elementor-3774 .elementor-element.elementor-element-a2d45cd:hover img{filter:brightness( 95% ) contrast( 100% ) saturate( 100% ) blur( 0px ) hue-rotate( 0deg );}.elementor-3774 .elementor-element.elementor-element-a2d45cd img{border-radius:20px 20px 20px 20px;}.elementor-3774 .elementor-element.elementor-element-a2d45cd > .elementor-widget-container{margin:0px 0px 10px 0px;}.elementor-3774 .elementor-element.elementor-element-a8e0ff6 .elementor-heading-title{font-family:"Caveat", Sans-serif;font-size:18px;font-weight:800;letter-spacing:1.2px;}.elementor-3774 .elementor-element.elementor-element-d8d3860 .elementor-heading-title{color:var( --e-global-color-3790e5c );font-family:"Poppins", Sans-serif;font-size:22px;font-weight:600;line-height:1.3em;}.elementor-3774 .elementor-element.elementor-element-d8d3860 > .elementor-widget-container{margin:0px 0px 5px 0px;}.elementor-3774 .elementor-element.elementor-element-77f2eff{--display:flex;--background-transition:0.3s;--border-radius:4px 4px 4px 4px;--padding-block-start:4px;--padding-block-end:4px;--padding-inline-start:4px;--padding-inline-end:4px;}.elementor-3774 .elementor-element.elementor-element-77f2eff:not(.elementor-motion-effects-element-type-background), .elementor-3774 .elementor-element.elementor-element-77f2eff > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-color:var( --e-global-color-f6da648 );}.elementor-3774 .elementor-element.elementor-element-77f2eff, .elementor-3774 .elementor-element.elementor-element-77f2eff::before{--border-transition:0.3s;}.elementor-3774 .elementor-element.elementor-element-77f2eff.e-con{--flex-grow:0;--flex-shrink:0;}.elementor-3774 .elementor-element.elementor-element-6f9ee9e .elementor-icon-list-icon i{color:var( --e-global-color-text );transition:color 0.3s;}.elementor-3774 .elementor-element.elementor-element-6f9ee9e .elementor-icon-list-icon svg{fill:var( --e-global-color-text );transition:fill 0.3s;}.elementor-3774 .elementor-element.elementor-element-6f9ee9e{--e-icon-list-icon-size:16px;--icon-vertical-offset:0px;}.elementor-3774 .elementor-element.elementor-element-6f9ee9e .elementor-icon-list-icon{padding-right:5px;}.elementor-3774 .elementor-element.elementor-element-6f9ee9e .elementor-icon-list-item > .elementor-icon-list-text, .elementor-3774 .elementor-element.elementor-element-6f9ee9e .elementor-icon-list-item > a{font-family:"Noto Sans", Sans-serif;font-size:14px;font-weight:600;}.elementor-3774 .elementor-element.elementor-element-6f9ee9e .elementor-icon-list-text{color:var( --e-global-color-text );transition:color 0.3s;}@media(max-width:767px){.elementor-3774 .elementor-element.elementor-element-77f2eff{--width:140px;}}@media(min-width:768px){.elementor-3774 .elementor-element.elementor-element-77f2eff{--width:36%;}}</style>		<div data-elementor-type="loop-item" data-elementor-id="3774" class="elementor elementor-3774 e-loop-item e-loop-item-5600 post-5600 post type-post status-publish format-standard has-post-thumbnail hentry category-seo-meesterschap entry has-media" data-elementor-post-type="elementor_library" data-custom-edit-handle="1">
+			<a class="elementor-element elementor-element-490363e e-flex e-con-boxed e-con e-parent no-lightbox" data-id="490363e" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}" data-core-v316-plus="true" href="https://superblogger.nl/hoe-werkt-een-zoekwoordplanner/">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-a2d45cd elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image" data-id="a2d45cd" data-element_type="widget" data-widget_type="theme-post-featured-image.default">
+				<div class="elementor-widget-container">
+													<img loading="lazy" width="1024" height="570" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%201024%20570&#39;%3E%3C/svg%3E" class="attachment-large size-large wp-image-1909" alt="Zoekwoordplanner, een goede vervanging" data-lazy-srcset="https://superblogger.nl/wp-content/uploads/2017/10/zoekwoordplanner-thumb-1024x570.jpeg 1024w, https://superblogger.nl/wp-content/uploads/2017/10/zoekwoordplanner-thumb-300x167.jpeg 300w, https://superblogger.nl/wp-content/uploads/2017/10/zoekwoordplanner-thumb-768x427.jpeg 768w, https://superblogger.nl/wp-content/uploads/2017/10/zoekwoordplanner-thumb-1536x855.jpeg 1536w, https://superblogger.nl/wp-content/uploads/2017/10/zoekwoordplanner-thumb-1080x601.jpeg 1080w, https://superblogger.nl/wp-content/uploads/2017/10/zoekwoordplanner-thumb-600x334.jpeg 600w, https://superblogger.nl/wp-content/uploads/2017/10/zoekwoordplanner-thumb.jpeg 2000w" data-lazy-sizes="(max-width: 1024px) 100vw, 1024px" data-lazy-src="https://superblogger.nl/wp-content/uploads/2017/10/zoekwoordplanner-thumb-1024x570.jpeg"><noscript><img loading="lazy" width="1024" height="570" src="https://superblogger.nl/wp-content/uploads/2017/10/zoekwoordplanner-thumb-1024x570.jpeg" class="attachment-large size-large wp-image-1909" alt="Zoekwoordplanner, een goede vervanging" srcset="https://superblogger.nl/wp-content/uploads/2017/10/zoekwoordplanner-thumb-1024x570.jpeg 1024w, https://superblogger.nl/wp-content/uploads/2017/10/zoekwoordplanner-thumb-300x167.jpeg 300w, https://superblogger.nl/wp-content/uploads/2017/10/zoekwoordplanner-thumb-768x427.jpeg 768w, https://superblogger.nl/wp-content/uploads/2017/10/zoekwoordplanner-thumb-1536x855.jpeg 1536w, https://superblogger.nl/wp-content/uploads/2017/10/zoekwoordplanner-thumb-1080x601.jpeg 1080w, https://superblogger.nl/wp-content/uploads/2017/10/zoekwoordplanner-thumb-600x334.jpeg 600w, https://superblogger.nl/wp-content/uploads/2017/10/zoekwoordplanner-thumb.jpeg 2000w" sizes="(max-width: 1024px) 100vw, 1024px" /></noscript>													</div>
+				</div>
+				<div class="elementor-element elementor-element-d8d3860 elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading" data-id="d8d3860" data-element_type="widget" data-widget_type="theme-post-title.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Hoe werkt een zoekwoordplanner? En welke gebruik je dan?</h3>		</div>
+				</div>
+		<div class="elementor-element elementor-element-77f2eff e-con-full e-flex e-con e-child" data-id="77f2eff" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;content_width&quot;:&quot;full&quot;}">
+				<div class="elementor-element elementor-element-6f9ee9e elementor-align-center elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="6f9ee9e" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-eye"></i>						</span>
+										<span class="elementor-icon-list-text">4 minuten</span>
+									</li>
+						</ul>
+				</div>
+				</div>
+				</div>
+					</div>
+				</a>
+				</div>
+				<div data-elementor-type="loop-item" data-elementor-id="3774" class="elementor elementor-3774 e-loop-item e-loop-item-4930 post-4930 post type-post status-publish format-standard has-post-thumbnail hentry category-content-met-impact tag-strategie entry has-media" data-elementor-post-type="elementor_library" data-custom-edit-handle="1">
+			<a class="elementor-element elementor-element-490363e e-flex e-con-boxed e-con e-parent no-lightbox" data-id="490363e" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}" data-core-v316-plus="true" href="https://superblogger.nl/starten-met-bloggen-strategie/">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-a2d45cd elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image" data-id="a2d45cd" data-element_type="widget" data-widget_type="theme-post-featured-image.default">
+				<div class="elementor-widget-container">
+													<img loading="lazy" width="1024" height="570" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%201024%20570&#39;%3E%3C/svg%3E" class="attachment-large size-large wp-image-4939" alt="Starten met bloggen strategie" data-lazy-srcset="https://superblogger.nl/wp-content/uploads/2023/08/blog-starten-strategie-1024x570.jpg 1024w, https://superblogger.nl/wp-content/uploads/2023/08/blog-starten-strategie-300x167.jpg 300w, https://superblogger.nl/wp-content/uploads/2023/08/blog-starten-strategie-768x427.jpg 768w, https://superblogger.nl/wp-content/uploads/2023/08/blog-starten-strategie-1536x855.jpg 1536w, https://superblogger.nl/wp-content/uploads/2023/08/blog-starten-strategie.jpg 2000w" data-lazy-sizes="(max-width: 1024px) 100vw, 1024px" data-lazy-src="https://superblogger.nl/wp-content/uploads/2023/08/blog-starten-strategie-1024x570.jpg"><noscript><img loading="lazy" width="1024" height="570" src="https://superblogger.nl/wp-content/uploads/2023/08/blog-starten-strategie-1024x570.jpg" class="attachment-large size-large wp-image-4939" alt="Starten met bloggen strategie" srcset="https://superblogger.nl/wp-content/uploads/2023/08/blog-starten-strategie-1024x570.jpg 1024w, https://superblogger.nl/wp-content/uploads/2023/08/blog-starten-strategie-300x167.jpg 300w, https://superblogger.nl/wp-content/uploads/2023/08/blog-starten-strategie-768x427.jpg 768w, https://superblogger.nl/wp-content/uploads/2023/08/blog-starten-strategie-1536x855.jpg 1536w, https://superblogger.nl/wp-content/uploads/2023/08/blog-starten-strategie.jpg 2000w" sizes="(max-width: 1024px) 100vw, 1024px" /></noscript>													</div>
+				</div>
+				<div class="elementor-element elementor-element-a8e0ff6 elementor-widget elementor-widget-heading" data-id="a8e0ff6" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<div class="elementor-heading-title elementor-size-default"><span>Strategie</span></div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-d8d3860 elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading" data-id="d8d3860" data-element_type="widget" data-widget_type="theme-post-title.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Starten met bloggen? Deze strategie raad ik je aan!</h3>		</div>
+				</div>
+		<div class="elementor-element elementor-element-77f2eff e-con-full e-flex e-con e-child" data-id="77f2eff" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;content_width&quot;:&quot;full&quot;}">
+				<div class="elementor-element elementor-element-6f9ee9e elementor-align-center elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="6f9ee9e" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-eye"></i>						</span>
+										<span class="elementor-icon-list-text">5 minuten</span>
+									</li>
+						</ul>
+				</div>
+				</div>
+				</div>
+					</div>
+				</a>
+				</div>
+				<div data-elementor-type="loop-item" data-elementor-id="3774" class="elementor elementor-3774 e-loop-item e-loop-item-4700 post-4700 post type-post status-publish format-standard has-post-thumbnail hentry category-succesvol-bloggen-101 tag-strategie entry has-media" data-elementor-post-type="elementor_library" data-custom-edit-handle="1">
+			<a class="elementor-element elementor-element-490363e e-flex e-con-boxed e-con e-parent no-lightbox" data-id="490363e" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}" data-core-v316-plus="true" href="https://superblogger.nl/waarom-het-niet-lukt-om-regelmatig-te-bloggen/">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-a2d45cd elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image" data-id="a2d45cd" data-element_type="widget" data-widget_type="theme-post-featured-image.default">
+				<div class="elementor-widget-container">
+													<img loading="lazy" width="1024" height="570" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%201024%20570&#39;%3E%3C/svg%3E" class="attachment-large size-large wp-image-4701" alt="Vrouw met Writer&#39;s Block" data-lazy-srcset="https://superblogger.nl/wp-content/uploads/2023/04/vrouw-met-writersblock-img-1024x570.jpg 1024w, https://superblogger.nl/wp-content/uploads/2023/04/vrouw-met-writersblock-img-300x167.jpg 300w, https://superblogger.nl/wp-content/uploads/2023/04/vrouw-met-writersblock-img-768x427.jpg 768w, https://superblogger.nl/wp-content/uploads/2023/04/vrouw-met-writersblock-img-1536x855.jpg 1536w, https://superblogger.nl/wp-content/uploads/2023/04/vrouw-met-writersblock-img.jpg 2000w" data-lazy-sizes="(max-width: 1024px) 100vw, 1024px" data-lazy-src="https://superblogger.nl/wp-content/uploads/2023/04/vrouw-met-writersblock-img-1024x570.jpg"><noscript><img loading="lazy" width="1024" height="570" src="https://superblogger.nl/wp-content/uploads/2023/04/vrouw-met-writersblock-img-1024x570.jpg" class="attachment-large size-large wp-image-4701" alt="Vrouw met Writer&#039;s Block" srcset="https://superblogger.nl/wp-content/uploads/2023/04/vrouw-met-writersblock-img-1024x570.jpg 1024w, https://superblogger.nl/wp-content/uploads/2023/04/vrouw-met-writersblock-img-300x167.jpg 300w, https://superblogger.nl/wp-content/uploads/2023/04/vrouw-met-writersblock-img-768x427.jpg 768w, https://superblogger.nl/wp-content/uploads/2023/04/vrouw-met-writersblock-img-1536x855.jpg 1536w, https://superblogger.nl/wp-content/uploads/2023/04/vrouw-met-writersblock-img.jpg 2000w" sizes="(max-width: 1024px) 100vw, 1024px" /></noscript>													</div>
+				</div>
+				<div class="elementor-element elementor-element-a8e0ff6 elementor-widget elementor-widget-heading" data-id="a8e0ff6" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<div class="elementor-heading-title elementor-size-default"><span>Strategie</span></div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-d8d3860 elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading" data-id="d8d3860" data-element_type="widget" data-widget_type="theme-post-title.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Waarom het niet lukt om ≥ 1 blog per maand te schrijven</h3>		</div>
+				</div>
+		<div class="elementor-element elementor-element-77f2eff e-con-full e-flex e-con e-child" data-id="77f2eff" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;content_width&quot;:&quot;full&quot;}">
+				<div class="elementor-element elementor-element-6f9ee9e elementor-align-center elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="6f9ee9e" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-eye"></i>						</span>
+										<span class="elementor-icon-list-text">5 minuten</span>
+									</li>
+						</ul>
+				</div>
+				</div>
+				</div>
+					</div>
+				</a>
+				</div>
+				</div>
+		
+				</div>
+				</div>
+					</div>
+				</div>
+				</div>
+		
+				
+			</div><!-- #content -->
+
+			
+		</div><!-- #primary -->
+
+		
+	</div><!-- #content-wrap -->
+
+	
+
+	</main><!-- #main -->
+
+	
+	
+			<div data-elementor-type="footer" data-elementor-id="48" class="elementor elementor-48 elementor-location-footer" data-elementor-post-type="elementor_library">
+			<div class="elementor-element elementor-element-f3b8c23 e-flex e-con-boxed e-con e-parent" data-id="f3b8c23" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;content_width&quot;:&quot;boxed&quot;}" data-core-v316-plus="true">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-3348b95 e-flex e-con-boxed e-con e-child" data-id="3348b95" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;content_width&quot;:&quot;boxed&quot;}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-022f362 e-con-full e-flex e-con e-child" data-id="022f362" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+				<div class="elementor-element elementor-element-f5bb930 elementor-widget elementor-widget-heading" data-id="f5bb930" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Meld je aan voor de content marathon nieuwsbrief</h3>		</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-d1b9803 e-flex e-con-boxed e-con e-child" data-id="d1b9803" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-4dfbb87 elementor-button-align-start form-check-wit elementor-mobile-button-align-stretch elementor-widget elementor-widget-form" data-id="4dfbb87" data-element_type="widget" data-settings="{&quot;step_next_label&quot;:&quot;Next&quot;,&quot;step_previous_label&quot;:&quot;Previous&quot;,&quot;button_width&quot;:&quot;33&quot;,&quot;step_type&quot;:&quot;number_text&quot;,&quot;step_icon_shape&quot;:&quot;circle&quot;}" data-widget_type="form.default">
+				<div class="elementor-widget-container">
+					<form class="elementor-form" method="post" name="Nieuw Formulier">
+			<input type="hidden" name="post_id" value="48">
+			<input type="hidden" name="form_id" value="4dfbb87">
+			<input type="hidden" name="referer_title" value="Over ons pagina maken? 5 voorbeelden ter inspiratie!">
+
+							<input type="hidden" name="queried_id" value="2986">
+			
+			<div class="elementor-form-fields-wrapper elementor-labels-">
+								<div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-FirstName elementor-col-33">
+												<label for="form-field-FirstName" class="elementor-field-label elementor-screen-only">
+								Naam							</label>
+														<input size="1" type="text" name="form_fields[FirstName]" id="form-field-FirstName" class="elementor-field elementor-size-md  elementor-field-textual" placeholder="Naam">
+											</div>
+								<div class="elementor-field-type-email elementor-field-group elementor-column elementor-field-group-EmailAddress elementor-col-33 elementor-field-required">
+												<label for="form-field-EmailAddress" class="elementor-field-label elementor-screen-only">
+								Email							</label>
+														<input size="1" type="email" name="form_fields[EmailAddress]" id="form-field-EmailAddress" class="elementor-field elementor-size-md  elementor-field-textual" placeholder="E-mailadres" required="required" aria-required="true">
+											</div>
+								<div class="elementor-field-type-hidden elementor-field-group elementor-column elementor-field-group-Newsletter elementor-col-100">
+													<input size="1" type="hidden" name="form_fields[Newsletter]" id="form-field-Newsletter" class="elementor-field elementor-size-md  elementor-field-textual" value="Ja">
+											</div>
+								<div class="elementor-field-type-hidden elementor-field-group elementor-column elementor-field-group-list_id elementor-col-100">
+													<input size="1" type="hidden" name="form_fields[list_id]" id="form-field-list_id" class="elementor-field elementor-size-md  elementor-field-textual" value="9b756d7c-6816-11ee-b7c4-5dcdaefd8d4d">
+											</div>
+								<div class="elementor-field-type-hidden elementor-field-group elementor-column elementor-field-group-tag elementor-col-100">
+													<input size="1" type="hidden" name="form_fields[tag]" id="form-field-tag" class="elementor-field elementor-size-md  elementor-field-textual" value="SuperBlogger">
+											</div>
+								<div class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-33 e-form__buttons">
+					<button type="submit" class="elementor-button elementor-size-sm">
+						<span>
+															<span class="elementor-align-icon-right elementor-button-icon">
+									<i aria-hidden="true" class="far fa-check-circle"></i>																	</span>
+																						<span class="elementor-button-text">Aanmelden</span>
+													</span>
+					</button>
+				</div>
+			</div>
+		</form>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-174856d privacylink tekst-no-margin elementor-widget elementor-widget-text-editor" data-id="174856d" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<p>Je gegevens worden gebruikt voor het versturen van de nieuwsbrief zoals omschreven in de&nbsp;<a href="https://superblogger.nl//privacyverklaring/">privacyverklaring</a>.</p>						</div>
+				</div>
+					</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-5d20cd5 e-flex e-con-boxed e-con e-child" data-id="5d20cd5" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-f2c5d76 e-flex e-con-boxed e-con e-child" data-id="f2c5d76" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-6b8edaa elementor-widget elementor-widget-theme-site-logo elementor-widget-image" data-id="6b8edaa" data-element_type="widget" data-widget_type="theme-site-logo.default">
+				<div class="elementor-widget-container">
+									<a href="https://superblogger.nl/">
+			<img loading="lazy" width="339" height="79" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20339%2079&#39;%3E%3C/svg%3E" class="attachment-full size-full wp-image-4141" alt="" data-lazy-srcset="https://superblogger.nl/wp-content/uploads/2023/01/logo-sb-wit.png 339w, https://superblogger.nl/wp-content/uploads/2023/01/logo-sb-wit-300x70.png 300w" data-lazy-sizes="(max-width: 339px) 100vw, 339px" data-lazy-src="https://superblogger.nl/wp-content/uploads/2023/01/logo-sb-wit.png"><noscript><img loading="lazy" loading="lazy" width="339" height="79" src="https://superblogger.nl/wp-content/uploads/2023/01/logo-sb-wit.png" class="attachment-full size-full wp-image-4141" alt="" srcset="https://superblogger.nl/wp-content/uploads/2023/01/logo-sb-wit.png 339w, https://superblogger.nl/wp-content/uploads/2023/01/logo-sb-wit-300x70.png 300w" sizes="(max-width: 339px) 100vw, 339px" /></noscript>				</a>
+									</div>
+				</div>
+				<div class="elementor-element elementor-element-b9c315f over-footer elementor-widget elementor-widget-text-editor" data-id="b9c315f" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<p>Voor tips en tricks over (zakelijk) bloggen, WordPress en het laten groeien van je website.&nbsp;</p><p>SuperBlogger is onderdeel van <a href="https://www.tekstory.nl/">Tekstory</a></p>						</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-b2acddf e-flex e-con-boxed e-con e-child" data-id="b2acddf" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-c16a227 elementor-widget elementor-widget-heading" data-id="c16a227" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Start hier!</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-87d925f elementor-nav-menu--dropdown-none elementor-widget elementor-widget-nav-menu" data-id="87d925f" data-element_type="widget" data-settings="{&quot;layout&quot;:&quot;vertical&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;i class=\&quot;\&quot;&gt;&lt;\/i&gt;&quot;,&quot;library&quot;:&quot;&quot;}}" data-widget_type="nav-menu.default">
+				<div class="elementor-widget-container">
+			<link rel="stylesheet" href="./img_files/widget-nav-menu.min.css">			<nav class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-vertical e--pointer-none">
+				<ul id="menu-1-87d925f" class="elementor-nav-menu sm-vertical" data-smartmenus-id="1711934543683264"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4950"><a href="https://superblogger.nl/over/" class="elementor-item">Over SuperBlogger</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4957"><a href="mailto:sharon@superblogger.nl" class="elementor-item">Stuur een bericht!</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-pro menu-item-5020"><a href="https://superblogger.nl/pro/workshop-bloggen/" class="elementor-item">SuperBlogger voor bedrijven</a></li>
+</ul>			</nav>
+						<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true" style="--menu-height: 0;">
+				<ul id="menu-2-87d925f" class="elementor-nav-menu sm-vertical" data-smartmenus-id="17119345436839795"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4950"><a href="https://superblogger.nl/over/" class="elementor-item" tabindex="-1">Over SuperBlogger</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4957"><a href="mailto:sharon@superblogger.nl" class="elementor-item" tabindex="-1">Stuur een bericht!</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-pro menu-item-5020"><a href="https://superblogger.nl/pro/workshop-bloggen/" class="elementor-item" tabindex="-1">SuperBlogger voor bedrijven</a></li>
+</ul>			</nav>
+				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-c8d2565 e-flex e-con-boxed e-con e-child" data-id="c8d2565" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-31b4b38 elementor-widget elementor-widget-heading" data-id="31b4b38" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Binnenkort op SuperBlogger!</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-fdbd072 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="fdbd072" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="far fa-hand-point-right"></i>						</span>
+										<span class="elementor-icon-list-text">Nuttige blogpost over SE Ranking</span>
+									</li>
+								<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="far fa-hand-point-right"></i>						</span>
+										<span class="elementor-icon-list-text">Start 'Van lezers naar kopers' online cursus. Bestel nu met korting!</span>
+									</li>
+								<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="far fa-hand-point-right"></i>						</span>
+										<span class="elementor-icon-list-text">Speciale nieuwsbrief met mijn beste blogtip. Ben jij al aangemeld?</span>
+									</li>
+						</ul>
+				</div>
+				</div>
+					</div>
+				</div>
+					</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-845b2af e-flex e-con-boxed e-con e-parent" data-id="845b2af" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}" data-core-v316-plus="true">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-11dcec4 e-flex e-con-boxed e-con e-child" data-id="11dcec4" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-8593c2d tekst-no-margin elementor-widget elementor-widget-text-editor" data-id="8593c2d" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<p>Copyright © 2023 SuperBlogger | Ontworpen met liefde &amp; Elementor | <a href="https://superblogger.nl/privacyverklaring/"><span style="text-decoration: underline;">Privacyverklaring</span></a> | <a href="https://superblogger.nl/wp-content/uploads/2023/11/Algemene-voorwaarden-SuperBlogger.pdf">Algemene Voorwaarden</a></p>						</div>
+				</div>
+					</div>
+				</div>
+					</div>
+				</div>
+				</div>
+		
+	
+</div><!-- #wrap -->
+
+
+</div><!-- #outer-wrap -->
+
+
+
+<a aria-label="Naar bovenkant pagina" href="https://superblogger.nl/over-ons-pagina-maken/#" id="scroll-top" class="scroll-top-right" style="opacity: 0; display: none;"><i class=" fa fa-angle-up" aria-hidden="true" role="img"></i></a>
+
+
+<div id="searchform-overlay" class="header-searchform-wrap clr">
+	<div class="container clr">
+	<form method="get" action="https://superblogger.nl/" class="header-searchform">
+			<a href="https://superblogger.nl/#hsoverlay-close" class="search-overlay-close" aria-label="Sluit dit zoekformulier"><span></span></a>
+			<span class="screen-reader-text">Zoek op deze site</span>
+			<input aria-label="Zoekopdracht invoegen" class="searchform-overlay-input" type="search" name="s" autocomplete="off" value="">
+			<span class="search-text">Type en druk op enter om te zoeken<span aria-hidden="true"><i></i><i></i><i></i></span></span>
+								</form>
+	</div>
+</div><!-- #searchform-overlay -->
+
+
+
+<div id="mobile-fullscreen" class="clr">
+
+	<div id="mobile-fullscreen-inner" class="clr">
+
+		<a href="https://superblogger.nl/#mobiel-fullscreen-menu" class="close" aria-label="Mobiel menu sluiten">
+			<div class="close-icon-wrap">
+				<div class="close-icon-inner"></div>
+			</div>
+		</a>
+
+		<nav class="clr" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement" role="navigation">
+
+			<ul id="menu-primair-1" class="fs-dropdown-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-329"><a href="https://superblogger.nl/start-hier/">Start hier</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-657"><a href="https://superblogger.nl/blog/">Alle blogs</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-630"><a href="https://superblogger.nl/producten/">Cursussen &amp; Ebooks</a></li>
+<li class="menu-cta menu-item menu-item-type-post_type menu-item-object-pro menu-item-5397"><a href="https://superblogger.nl/pro/minicursus-bloggen/">Gratis minicursus</a></li>
+<li class="search-toggle-li"><a href="https://superblogger.nl/#" class="site-search-toggle search-overlay-toggle"><span class="screen-reader-text">Toggle website zoeken</span><i class=" icon-magnifier" aria-hidden="true" role="img"></i></a></li></ul>
+<div id="mobile-search" class="clr">
+	<form id="mfs-search" method="get" action="https://superblogger.nl/" class="header-searchform" aria-label="Zoek op deze site">
+		<span class="search-text">Zoeken<span><i></i><i></i><i></i></span></span>
+		<input id="mfs-input" aria-labelledby="mfs-search mfs-input" type="search" name="s" value="" autocomplete="off">
+			</form>
+</div>
+
+		</nav>
+
+	</div>
+
+</div>
+
+
+<script async="" data-id="100767341" src="./img_files/js(1)"></script><link rel="stylesheet" id="ez-toc-css" href="./img_files/screen.min.css" media="all">
+<style id="ez-toc-inline-css">
+div#ez-toc-container .ez-toc-title {font-size: 120%;}div#ez-toc-container .ez-toc-title {font-weight: 500;}div#ez-toc-container ul li {font-size: 95%;}div#ez-toc-container nav ul ul li ul li {font-size: 90%!important;}
+div#ez-toc-container .ez-toc-title {font-size: 120%;}div#ez-toc-container .ez-toc-title {font-weight: 500;}div#ez-toc-container ul li {font-size: 95%;}div#ez-toc-container nav ul ul li ul li {font-size: 90%!important;}
+</style>
+
+<script id="rocket-browser-checker-js-after">
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+</script>
+<script id="rocket-preload-links-js-extra">
+var RocketPreloadLinksConfig = {"excludeUris":"\/(.+\/)?feed\/?.+\/?|\/(?:.+\/)?embed\/|\/(index\\.php\/)?wp\\-json(\/.*|$)|\/wp-admin\/|\/logout\/|\/wp-login.php","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|php|pdf|html|htm","siteUrl":"https:\/\/superblogger.nl","onHoverDelay":"100","rateThrottle":"3"};
+</script>
+<script id="rocket-preload-links-js-after">
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+</script>
+<script src="./img_files/imagesloaded.min.js.download" id="imagesloaded-js" defer=""></script>
+<script id="oceanwp-main-js-extra">
+var oceanwpLocalize = {"nonce":"4e148ac9ca","isRTL":"","menuSearchStyle":"overlay","mobileMenuSearchStyle":"disabled","sidrSource":null,"sidrDisplace":"1","sidrSide":"left","sidrDropdownTarget":"link","verticalHeaderTarget":"link","customScrollOffset":"0","customSelects":".woocommerce-ordering .orderby, #dropdown_product_cat, .widget_categories select, .widget_archive select, .single-product .variations_form .variations select","ajax_url":"https:\/\/superblogger.nl\/wp-admin\/admin-ajax.php","oe_mc_wpnonce":"31290f5c7b"};
+</script>
+<script src="./img_files/theme.min.js.download" id="oceanwp-main-js" defer=""></script>
+<script src="./img_files/full-screen-mobile-menu.min.js.download" id="oceanwp-full-screen-mobile-menu-js" defer=""></script>
+<script src="./img_files/overlay-search.min.js.download" id="oceanwp-overlay-search-js" defer=""></script>
+<script src="./img_files/magnific-popup.min.js.download" id="ow-magnific-popup-js" defer=""></script>
+<script src="./img_files/ow-lightbox.min.js.download" id="oceanwp-lightbox-js" defer=""></script>
+<script src="./img_files/flickity.pkgd.min.js.download" id="ow-flickity-js" defer=""></script>
+<script src="./img_files/ow-slider.min.js.download" id="oceanwp-slider-js" defer=""></script>
+<script src="./img_files/scroll-effect.min.js.download" id="oceanwp-scroll-effect-js" defer=""></script>
+<script src="./img_files/scroll-top.min.js.download" id="oceanwp-scroll-top-js" defer=""></script>
+<script src="./img_files/select.min.js.download" id="oceanwp-select-js" defer=""></script>
+<script src="./img_files/js.cookie.min.js.download" id="ez-toc-js-cookie-js" defer=""></script>
+<script src="./img_files/jquery.sticky-kit.min.js.download" id="ez-toc-jquery-sticky-kit-js" defer=""></script>
+<script id="ez-toc-js-js-extra">
+var ezTOC = {"smooth_scroll":"","scroll_offset":"30","fallbackIcon":"<span class=\"\"><span class=\"eztoc-hide\" style=\"display:none;\">Toggle<\/span><span class=\"ez-toc-icon-toggle-span\"><svg style=\"fill: #999;color:#999\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" class=\"list-377408\" width=\"20px\" height=\"20px\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z\" fill=\"currentColor\"><\/path><\/svg><svg style=\"fill: #999;color:#999\" class=\"arrow-unsorted-368013\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"10px\" height=\"10px\" viewBox=\"0 0 24 24\" version=\"1.2\" baseProfile=\"tiny\"><path d=\"M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z\"\/><\/svg><\/span><\/span>"};
+</script>
+<script src="./img_files/front.min.js.download" id="ez-toc-js-js" defer=""></script>
+<script src="./img_files/jquery.datatables.min.js.download" id="tablepress-datatables-js" defer=""></script>
+<script src="./img_files/jquery.smartmenus.min.js.download" id="smartmenus-js" defer=""></script>
+<script src="./img_files/webpack-pro.runtime.min.js.download" id="elementor-pro-webpack-runtime-js" defer=""></script>
+<script src="./img_files/webpack.runtime.min.js.download" id="elementor-webpack-runtime-js" defer=""></script>
+<script src="./img_files/frontend-modules.min.js.download" id="elementor-frontend-modules-js" defer=""></script>
+<script src="./img_files/wp-polyfill-inert.min.js.download" id="wp-polyfill-inert-js" defer=""></script>
+<script src="./img_files/regenerator-runtime.min.js.download" id="regenerator-runtime-js" defer=""></script>
+<script src="./img_files/wp-polyfill.min.js.download" id="wp-polyfill-js"></script>
+<script src="./img_files/hooks.min.js.download" id="wp-hooks-js"></script>
+<script src="./img_files/i18n.min.js.download" id="wp-i18n-js"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
+<script id="elementor-pro-frontend-js-before">
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/superblogger.nl\/wp-admin\/admin-ajax.php","nonce":"f07f34b114","urls":{"assets":"https:\/\/superblogger.nl\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"https:\/\/superblogger.nl\/wp-json\/"},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"nl_NL","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/superblogger.nl\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+</script>
+<script src="./img_files/frontend.min.js.download" id="elementor-pro-frontend-js" defer=""></script>
+<script src="./img_files/waypoints.min.js.download" id="elementor-waypoints-js" defer=""></script>
+<script src="./img_files/core.min.js.download" id="jquery-ui-core-js" defer=""></script>
+<script id="elementor-frontend-js-before">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Deel via Facebook","shareOnTwitter":"Deel via Twitter","pinIt":"Pin dit","download":"Downloaden","downloadImage":"Download afbeelding","fullscreen":"Volledig scherm","zoom":"Zoom","share":"Delen","playVideo":"Video afspelen","previous":"Vorige","next":"Volgende","close":"Sluiten","a11yCarouselWrapperAriaLabel":"Carrousel | Horizontaal scrollen: pijl links & rechts","a11yCarouselPrevSlideMessage":"Vorige slide","a11yCarouselNextSlideMessage":"Volgende slide","a11yCarouselFirstSlideMessage":"Ga naar de eerste slide","a11yCarouselLastSlideMessage":"Ga naar de laatste slide","a11yCarouselPaginationBulletMessage":"Ga naar slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobiel Portret","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobiel landschap modus","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet portret modus","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet landschap","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Breedbeeld","value":2400,"default_value":2400,"direction":"min","is_enabled":false}}},"version":"3.19.2","is_static":false,"experimentalFeatures":{"e_optimized_assets_loading":true,"e_optimized_css_loading":true,"additional_custom_breakpoints":true,"container":true,"theme_builder_v2":true,"block_editor_assets_optimize":true,"ai-layout":true,"landing-pages":true,"e_image_loading_optimization":true,"e_global_styleguide":true,"notes":true,"form-submissions":true},"urls":{"assets":"https:\/\/superblogger.nl\/wp-content\/plugins\/elementor\/assets\/"},"swiperClass":"swiper-container","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":2986,"title":"Over%20ons%20pagina%20maken%3F%205%20voorbeelden%20ter%20inspiratie%21","excerpt":"Hoe maak je een goede over ons pagina voor je bedrijf of blog? Je leest het in deze blog met basisregels, handige tips en wel 5 verschillende voorbeelden ter inspiratie. ","featuredImage":"https:\/\/superblogger.nl\/wp-content\/uploads\/2020\/07\/over-ons-pagina-maken-img-1024x570.jpg"}};
+</script>
+<script src="./img_files/frontend.min(1).js.download" id="elementor-frontend-js" defer=""></script>
+<script src="./img_files/elements-handlers.min.js.download" id="pro-elements-handlers-js" defer=""></script>
+<script src="./img_files/jquery.sticky.min.js.download" id="e-sticky-js" defer=""></script>
+<script>window.addEventListener('DOMContentLoaded', function() {
+jQuery(function($){
+var DT_language={"nl_NL":{"emptyTable":"Geen resultaten aanwezig in de tabel","info":"_START_ tot _END_ van _TOTAL_ resultaten","infoEmpty":"Geen resultaten om weer te geven","infoFiltered":"(gefilterd uit _MAX_ resultaten)","infoPostFix":"","lengthMenu":"_MENU_ resultaten weergeven","loadingRecords":"Een moment geduld aub - bezig met laden...","processing":"Bezig...","search":"Zoeken:","zeroRecords":"Geen resultaten gevonden","paginate":{"first":"Eerste","previous":"Vorige","next":"Volgende","last":"Laatste"},"decimal":",","thousands":"."}};
+$('#tablepress-3').DataTable({"language":DT_language["nl_NL"],"stripeClasses":["even","odd"],"ordering":false,"paging":false,"searching":false,"info":false});
+$('#tablepress-3-no-2').DataTable({"language":DT_language["nl_NL"],"stripeClasses":["even","odd"],"ordering":false,"paging":false,"searching":false,"info":false});
+});
+});</script><script>window.lazyLoadOptions={elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}};window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async="" src="./img_files/lazyload.min.js.download"></script><script>class RocketElementorAnimation{constructor(){this.deviceMode=document.createElement("span"),this.deviceMode.id="elementor-device-mode",this.deviceMode.setAttribute("class","elementor-screen-only"),document.body.appendChild(this.deviceMode)}_detectAnimations(){let t=getComputedStyle(this.deviceMode,":after").content.replace(/"/g,"");this.animationSettingKeys=this._listAnimationSettingsKeys(t),document.querySelectorAll(".elementor-invisible[data-settings]").forEach(t=>{const e=t.getBoundingClientRect();if(e.bottom>=0&&e.top<=window.innerHeight)try{this._animateElement(t)}catch(t){}})}_animateElement(t){const e=JSON.parse(t.dataset.settings),i=e._animation_delay||e.animation_delay||0,n=e[this.animationSettingKeys.find(t=>e[t])];if("none"===n)return void t.classList.remove("elementor-invisible");t.classList.remove(n),this.currentAnimation&&t.classList.remove(this.currentAnimation),this.currentAnimation=n;let s=setTimeout(()=>{t.classList.remove("elementor-invisible"),t.classList.add("animated",n),this._removeAnimationSettings(t,e)},i);window.addEventListener("rocket-startLoading",function(){clearTimeout(s)})}_listAnimationSettingsKeys(t="mobile"){const e=[""];switch(t){case"mobile":e.unshift("_mobile");case"tablet":e.unshift("_tablet");case"desktop":e.unshift("_desktop")}const i=[];return["animation","_animation"].forEach(t=>{e.forEach(e=>{i.push(t+e)})}),i}_removeAnimationSettings(t,e){this._listAnimationSettingsKeys().forEach(t=>delete e[t]),t.dataset.settings=JSON.stringify(e)}static run(){const t=new RocketElementorAnimation;requestAnimationFrame(t._detectAnimations.bind(t))}}document.addEventListener("DOMContentLoaded",RocketElementorAnimation.run);</script>
+
+
+<span id="elementor-device-mode" class="elementor-screen-only"></span><span id="elementor-device-mode" class="elementor-screen-only"></span><svg style="display: none;" class="e-font-icon-svg-symbols"></svg><script type="text/javascript" async="" src="./img_files/in.php"></script></body></html>

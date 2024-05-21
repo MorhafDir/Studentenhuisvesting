@@ -1,0 +1,428 @@
+body{
+
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(224, 237, 237);
+
+
+}
+
+header{
+    height: 180px;
+
+    background: rgb(255, 187, 153);
+    border: 2px solid red;
+}
+
+h1{
+    border: 2px solid orange;
+    font-size: 150%;
+    text-align: center;
+}
+
+
+.a-registratie{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 30px;
+    color: black;
+}
+
+.login-registratie{
+    float: right;
+    margin-left: 30px;
+    margin-right: 30px;
+    border: 2px solid black;
+}
+
+
+.img-logo{
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    border-radius: 40px;
+}
+
+
+
+.container-nav{
+    height: 15%;
+    padding: 10px;
+    margin-top: -60px;
+    margin-left: 540px;
+    text-align: center;
+    background: rgb(255, 187, 153);
+    /* border: 2px solid rgb(0, 255, 89); */
+}
+
+.menu{
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 13px;
+    color: rgb(103, 58, 108);
+    text-decoration: none;
+    /* border: 2px solid blue; */
+}
+
+.foto-section{
+    /* padding: 10px; */
+    border: 2px solid wheat;
+}
+
+.foto-wrapper{
+    height: 150%;
+    border: 2px solid black;
+}
+
+.foto-outer{
+    border: 2px solid red;
+}
+
+.foto-inner{
+    height: 98%;
+    border: 2px solid green;
+}
+
+.title-p{
+    font-size: 35px;
+    margin-top: 50px;
+    text-align: center;
+    border: 2px solid black;
+}
+
+.img-student{
+    width: 80%;
+    height: 70%;
+    margin-left: 10%;
+
+}
+
+.studentkamerhuur-text{
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid rebeccapurple;
+}
+
+
+.text-section{
+    border: 2px solid red;
+}
+
+.text-wrapper{
+    height: 80%;
+    border: 2px solid green;
+}
+
+.text-outer{
+    border: 2px solid rgb(155, 102, 4);
+}
+
+.text-inner{
+    height: 99%;
+    border: 2px solid rgb(12, 12, 12);
+}
+
+.handig{
+    font-size: 30px;
+    font-weight: bold;
+    padding: 60px;
+    margin-left: 80px;
+    border: 2px solid green;
+}
+
+.studentkamer{
+    font-size: 20px;
+    margin-left: 140px;
+    border: 2px solid goldenrod;
+}
+
+
+.inschrijven{
+    font-size: 20px;
+    padding: 40px;
+    margin-left: 90px;
+    border: 2px solid green;
+}
+
+
+.text-woning-section{
+    border: 2px solid red;
+}
+
+.text-woning-wrapper{
+    height: 80%;
+    border: 2px solid green;
+}
+
+.text-woning-outer{
+    border: 2px solid rgb(155, 102, 4);
+}
+
+.text-woning-inner{
+    height: 99%;
+    border: 2px solid rgb(12, 12, 12);
+}
+
+.woning{
+    font-size: 30px;
+    font-weight: bold;
+    padding: 60px;
+    margin-left: 80px;
+    border: 2px solid green;
+}
+
+.woningkamer{
+    font-size: 20px;
+    margin-left: 140px;
+    border: 2px solid goldenrod;
+}
+
+
+.woning-inschrijven{
+    font-size: 20px;
+    padding: 40px;
+    margin-left: 90px;
+    border: 2px solid green;
+}
+
+
+.pararius-section{
+    border: 2px solid red;
+}
+
+.pararius-wrapper{
+    height: 80%;
+    border: 2px solid green;
+}
+
+.pararius-outer{
+    border: 2px solid rgb(155, 102, 4);
+}
+
+.pararius-inner{
+    height: 99%;
+    border: 2px solid rgb(12, 12, 12);
+}
+
+.pararius{
+    font-size: 30px;
+    font-weight: bold;
+    padding: 60px;
+    margin-left: 80px;
+    border: 2px solid green;
+}
+
+.parariuskamer{
+    font-size: 20px;
+    margin-left: 140px;
+    border: 2px solid goldenrod;
+}
+
+
+.pararius-inschrijven{
+    font-size: 20px;
+    padding: 40px;
+    margin-left: 90px;
+    border: 2px solid green;
+}
+
+
+.kamers-section{
+    border: 2px solid red;
+}
+
+.kamers-wrapper{
+    height: 70%;
+    border: 2px solid green;
+}
+
+.kamers-outer{
+    border: 2px solid rgb(155, 102, 4);
+}
+
+.kamers-inner{
+    height: 99%;
+    border: 2px solid rgb(12, 12, 12);
+}
+
+.kamers{
+    font-size: 30px;
+    font-weight: bold;
+    padding: 60px;
+    margin-left: 80px;
+    border: 2px solid green;
+}
+
+.kamerskamer{
+    font-size: 20px;
+    margin-left: 140px;
+    border: 2px solid goldenrod;
+}
+
+
+.kamers-inschrijven{
+    font-size: 20px;
+    padding:40px;
+    margin-left: 90px;
+    border: 2px solid green;
+}
+
+
+.room-section{
+    border: 2px solid red;
+}
+
+.room-wrapper{
+    height: 70%;
+    border: 2px solid green;
+}
+
+.room-outer{
+    border: 2px solid rgb(155, 102, 4);
+}
+
+.room-inner{
+    height: 99%;
+    border: 2px solid rgb(12, 12, 12);
+}
+
+.room{
+    font-size: 30px;
+    font-weight: bold;
+    padding: 60px;
+    margin-left: 80px;
+    border: 2px solid green;
+}
+
+.roomkamer{
+    font-size: 20px;
+    margin-left: 140px;
+    border: 2px solid goldenrod;
+}
+
+
+.room-inschrijven{
+    font-size: 20px;
+    padding: 40px;
+    margin-left: 90px;
+    border: 2px solid green;
+}
+
+
+.tips-section{
+    border: 2px solid red;
+}
+
+.tips-wrapper{
+    height: 50%;
+    border: 2px solid green;
+}
+
+.tips-outer{
+    border: 2px solid rgb(155, 102, 4);
+}
+
+.tips-inner{
+    height: 99%;
+    border: 2px solid rgb(12, 12, 12);
+}
+
+.tips{
+    font-size: 30px;
+    font-weight: bold;
+    padding: 40px;
+    margin-left: 100px;
+    border: 2px solid green;
+}
+
+.tipskamer{
+    font-size: 20px;
+    margin-left: 135px;
+    border: 2px solid goldenrod;
+}
+
+
+
+footer{
+    height: 20%;
+    padding: 10px;
+    margin-top: 100px;
+    background: rgb(255, 187, 153);
+    border: 2px solid rgb(0, 81, 255);
+}
+
+.footer-section{
+    border: 2px solid red;
+}
+
+.footer-wrapper{
+    height: 90%;
+    border: 2px solid wheat;
+}
+
+.outer-div{
+    float: left;
+    display: grid;
+    place-items: center;
+    width: 33.1%;
+    height: 98%;
+    border: 2px solid black;
+}
+
+.inner-div{
+    width: 98%;
+    height: 120px;
+    text-align: center;
+    border: 2px solid red;
+}
+
+
+.icon-insta{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    border: 2px solid rgb(255, 255, 255)
+}
+
+.icone-linkedin{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background: white;
+    /* border: 2px solid rgb(255, 255, 255) */
+}
+
+.icone-gitlab{
+    width:40px;
+    height: 40px;
+    border-radius: 20px;
+    /* border: 2px solid rgb(255, 255, 255) */
+} 
+
+.icon-facebook{
+    width:40px;
+    height: 40px;
+    border-radius: 20px;
+    /* border: 2px solid rgb(255, 255, 255) */
+}
+
+
+.outer-media-div{
+    float: left;
+    display: grid;
+    place-items: center;
+    width: 33.1%;
+    height: 98%;
+    border: 2px solid black;
+}
+
+.inner-media-div{
+    width: 98%;
+    height: 50px;
+    margin-top: 70px;
+    text-align: center;
+    border: 2px solid red;
+}
+
